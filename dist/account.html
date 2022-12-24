@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Куда Пицца</title>
+	<link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__container">
+		<div class="header__top top-header">
+			<!-- <button class="top-header__city">Москва<span
+					class="dropdown-arrow"></span></button> -->
+			<div class="top-header__city select-wrapper">
+				<select class="select-element top-header__select" name="" id="">
+					<option value="Москва">Москва</option>
+					<option value="Питер">Санкт-Петербург</option>
+					<option value="Екатеринбург">Екатеринбург</option>
+					<option value="Белгород">Белгород</option>
+					<option value="Смоленс">Смоленск</option>
+				</select>
+				<svg class="select-arrow top-header__select-arrow" width="32"
+					height="32" viewBox="0 0 32 32">
+					<title>arrowsvg</title>
+					<path
+						d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
+					</path>
+				</svg>
+				<!-- <span class="select-custom-arrow top-header__select-arrow"></span>
+				 -->
+				<!-- <div class="select-wrapper">
+
+				</div> -->
+			</div>
+			<a class="top-header__address link-primary" href="#checkAddress">Проверить
+				адрес</a>
+			<p class="top-header__time-text">Среднее время доставки*:
+				<time class="top-header__time">00:24:19</time>
+			</p>
+			<p class="top-header__working-hours">Время работы: с 11:00 до
+				23:00</p>
+			<a class="top-header__login link-primary" href="#">Войти в аккаунт</a>
+		</div>
+	</div>
+	<hr class="separator">
+
+	<div class="header__container">
+		<a class="logo link-primary logo__link header__logo" href="index.html">
+			<img class="logo__img" src="img/logo.svg" alt="logo">
+		</a>
+		<div class="header__menu menu">
+			<button class="menu-icon">
+				<span class="hide-text">Меню</span>
+			</button>
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Акции</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Пицца</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Суши</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Напитки</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Закуски</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Комбо</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Десерты</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Соусы</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Другое</a>
+						<ul class="sub-menu__list">
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Акции</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">О компании</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Пользовательское
+									соглашение</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Условия
+									гарантии</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Ресторан</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Контакты</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Поддержка</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Отследить
+									заказ</a>
+							</li>
+						</ul>
+
+					</li>
+				</ul>
+
+				<div class="menu-mobile">
+					<!-- <hr class="separator"> -->
+					<a class="login menu-mobile__login" href="#">Войти в аккаунт</a>
+					<hr class="separator">
+					<ul class="menu-mobile__list">
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Акции</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">О компании</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Пользовательское
+								соглашение</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Условия гарантии</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Ресторан</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Контакты</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Поддержка</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Отследить заказ</a>
+						</li>
+					</ul>
+					<hr class="separator">
+					<div class="contacts menu-mobile__contacts">
+						<a class="contacts__phone contact-align-text"
+							href="tel:+79262231011">+7 (926) 223-10-11</a>
+						<a class="contacts__address contact-align-text" href="#">Москва, ул.
+							Юных Ленинцев, д.99</a>
+						<div class="contacts__socials">
+							<a class="contacts__facebook contact-align-text"
+								href="#">Facebook</a>
+							<a class="contacts__instagram contact-align-text"
+								href="#">Instagram</a>
+						</div>
+					</div>
+					<hr class="separator">
+					<p class="menu-mobile__working-hours">Время работы: с 11:00 до
+						23:00</p>
+				</div>
+			</nav>
+
+		</div>
+		<div class="cart-btn">
+			<span class="cart-btn__counter-mobile">0</span>
+			<span class="cart-btn__counter"></span>
+			<button class="cart-btn__button button-filled">1000 <span
+					class="currency">&#8381</span></button>
+		</div>
+
+	</div>
+	<hr class="separator">
+</header>
+
+		<main class="page">
+			<div class="page__container">
+
+				<section class="account page__account">
+
+
+</section>
+
+
+			</div>
+		</main>
+		<div class="footer">
+	<div class="footer__container">
+		<div class="footer__logo-col">
+			<a class="logo link-primary logo__link footer__logo" href="">
+				<img class="logo__img" src="img/logo.svg" alt="logo">
+			</a>
+			<p class="footer__copy">© Copyright 2021 — Куда Пицца</p>
+		</div>
+		<div class="footer__about">
+			<h3 class="footer__title">Куда пицца</h3>
+			<ul class="footer__list">
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">О компании</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Пользовательское
+						соглашение</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Условия гарантии</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__help">
+			<ul class="footer__list">
+				<h3 class="footer__title">Помощь</h3>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Ресторан</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Контакты</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Поддержка</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Отследить заказ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__contacts contacts">
+			<h3 class="footer__title">Контакты</h3>
+			<a class="contacts__phone contact-align-text link-primary footer__socials-link"
+				href="tel:+79262231011">+7
+				(926) 223-10-11</a>
+			<a class="contacts__address contact-align-text link-primary footer__socials-link"
+				href="#">Москва, ул. Юных
+				Ленинцев, д.99</a>
+			<div class="contacts__socials">
+				<a class="contacts__facebook contact-align-text link-primary footer__socials-link"
+					href="#">Facebook</a>
+				<a class="contacts__instagram contact-align-text link-primary footer__socials-link"
+					href="#">Instagram</a>
+			</div>
+		</div>
+	</div>
+	<hr class="separator footer__separator">
+	<p class="footer__copy-clone">© Copyright 2021 — Куда Пицца</p>
+</div>
+
+	</div>
+	<script
+		src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

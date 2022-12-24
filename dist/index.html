@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Куда Пицца</title>
+	<link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__container">
+		<div class="header__top top-header">
+			<!-- <button class="top-header__city">Москва<span
+					class="dropdown-arrow"></span></button> -->
+			<div class="top-header__city select-wrapper">
+				<select class="select-element top-header__select" name="" id="">
+					<option value="Москва">Москва</option>
+					<option value="Питер">Санкт-Петербург</option>
+					<option value="Екатеринбург">Екатеринбург</option>
+					<option value="Белгород">Белгород</option>
+					<option value="Смоленс">Смоленск</option>
+				</select>
+				<svg class="select-arrow top-header__select-arrow" width="32"
+					height="32" viewBox="0 0 32 32">
+					<title>arrowsvg</title>
+					<path
+						d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
+					</path>
+				</svg>
+				<!-- <span class="select-custom-arrow top-header__select-arrow"></span>
+				 -->
+				<!-- <div class="select-wrapper">
+
+				</div> -->
+			</div>
+			<a class="top-header__address link-primary" href="#checkAddress">Проверить
+				адрес</a>
+			<p class="top-header__time-text">Среднее время доставки*:
+				<time class="top-header__time">00:24:19</time>
+			</p>
+			<p class="top-header__working-hours">Время работы: с 11:00 до
+				23:00</p>
+			<a class="top-header__login link-primary" href="#">Войти в аккаунт</a>
+		</div>
+	</div>
+	<hr class="separator">
+
+	<div class="header__container">
+		<a class="logo link-primary logo__link header__logo" href="index.html">
+			<img class="logo__img" src="img/logo.svg" alt="logo">
+		</a>
+		<div class="header__menu menu">
+			<button class="menu-icon">
+				<span class="hide-text">Меню</span>
+			</button>
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Акции</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Пицца</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Суши</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Напитки</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Закуски</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Комбо</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Десерты</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Соусы</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__link link-primary" href="#">Другое</a>
+						<ul class="sub-menu__list">
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Акции</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">О компании</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Пользовательское
+									соглашение</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Условия
+									гарантии</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Ресторан</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Контакты</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Поддержка</a>
+							</li>
+							<li class="sub-menu__list-item">
+								<a class="sub-menu__link link-primary" href="#">Отследить
+									заказ</a>
+							</li>
+						</ul>
+
+					</li>
+				</ul>
+
+				<div class="menu-mobile">
+					<!-- <hr class="separator"> -->
+					<a class="login menu-mobile__login" href="#">Войти в аккаунт</a>
+					<hr class="separator">
+					<ul class="menu-mobile__list">
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Акции</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">О компании</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Пользовательское
+								соглашение</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Условия гарантии</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Ресторан</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Контакты</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Поддержка</a>
+						</li>
+						<li class="menu-mobile__list-item">
+							<a class="menu-mobile__link" href="#">Отследить заказ</a>
+						</li>
+					</ul>
+					<hr class="separator">
+					<div class="contacts menu-mobile__contacts">
+						<a class="contacts__phone contact-align-text"
+							href="tel:+79262231011">+7 (926) 223-10-11</a>
+						<a class="contacts__address contact-align-text" href="#">Москва, ул.
+							Юных Ленинцев, д.99</a>
+						<div class="contacts__socials">
+							<a class="contacts__facebook contact-align-text"
+								href="#">Facebook</a>
+							<a class="contacts__instagram contact-align-text"
+								href="#">Instagram</a>
+						</div>
+					</div>
+					<hr class="separator">
+					<p class="menu-mobile__working-hours">Время работы: с 11:00 до
+						23:00</p>
+				</div>
+			</nav>
+
+		</div>
+		<div class="cart-btn">
+			<span class="cart-btn__counter-mobile">0</span>
+			<span class="cart-btn__counter"></span>
+			<button class="cart-btn__button button-filled">1000 <span
+					class="currency">&#8381</span></button>
+		</div>
+
+	</div>
+	<hr class="separator">
+</header>
+
+		<main class="page">
+			<div class="page__container">
+				<section class="main page__main">
+	<ul class="main__categories-list">
+		<li class="main__categories-list-item">
+			<a class="main__categories-link link-primary-filled" href="index.html">
+				<img class="main__categories-icon" src="img/fire.svg" alt="Pizza icon">
+				Акции
+			</a>
+		</li>
+		<li class="main__categories-list-item">
+			<a class="main__categories-link link-primary-filled" href="#">
+				<img class="main__categories-icon" src="img/pizza.svg"
+					alt="Pizza icon">
+				Пицца
+			</a>
+		</li>
+		<li class="main__categories-list-item">
+			<a class="main__categories-link link-primary-filled" href="#">
+				<img class="main__categories-icon" src="img/bread.svg"
+					alt="Pizza icon">
+				Суши
+			</a>
+		</li>
+		<li class="main__categories-list-item">
+			<a class="main__categories-link link-primary-filled" href="#">
+				<img class="main__categories-icon" src="img/drink.svg"
+					alt="Pizza icon">
+				Напитки
+			</a>
+		</li>
+		<li class="main__categories-list-item">
+			<a class="main__categories-link link-primary-filled" href="#">
+				<img class="main__categories-icon" src="img/fries.svg"
+					alt="Pizza icon">
+				Закуски
+			</a>
+		</li>
+		<li class="main__categories-list-item">
+			<a class="main__categories-link link-primary-filled" href="#">
+				<img class="main__categories-icon" src="img/pizza-drink.svg"
+					alt="Pizza icon">
+				Комбо
+			</a>
+		</li>
+		<li class="main__categories-list-item">
+			<a class="main__categories-link link-primary-filled" href="#">
+				<img class="main__categories-icon" src="img/cake.svg" alt="Pizza icon">
+				Десерты
+			</a>
+		</li>
+		<li class="main__categories-list-item">
+			<a class="main__categories-link link-primary-filled" href="#">
+				<img class="main__categories-icon" src="img/souce.svg"
+					alt="Pizza icon">
+				Соусы
+			</a>
+		</li>
+	</ul>
+	<!-- <div class="your-class">
+		<div>your content</div>
+		<div>your content</div>
+		<div>your content</div>
+	</div> -->
+	<div class="swiper-container main-slider">
+		<div class="swiper-wrapper main-slider__wrapper ">
+			<div class="swiper-slide main-slider__slide">
+				<img class="main-slider__image" src="img/common.jpg" alt="Sale 1">
+				<a class="main-slider__link" href="#">3 средние
+					пиццы от 999 рублей</a>
+			</div>
+			<div class="main-slider__slide swiper-slide">
+				<img class="main-slider__image" src="img/common.jpg" alt="Sale 2">
+				<a class="main-slider__link" href="#">Кэшбек 10% на самовывоз
+					(доставка)</a>
+
+			</div>
+			<div class="main-slider__slide swiper-slide">
+				<img class="main-slider__image" src="img/common.jpg" alt="Sale 3">
+				<a class="main-slider__link" href="#">3 средние пиццы от 999 рублей</a>
+			</div>
+			<div class="main-slider__slide swiper-slide">
+				<img class="main-slider__image" src="img/common.jpg" alt="Sale 4">
+				<a class="main-slider__link" href="#">Кэшбек 10% на самовывоз
+					(доставка)</a>
+			</div>
+
+			<div class="swiper-slide main-slider__slide">
+				<img class="main-slider__image" src="img/common.jpg" alt="Sale 1">
+				<a class="main-slider__link" href="#">3 средние пиццы от 999 рублей</a>
+			</div>
+			<div class="main-slider__slide swiper-slide">
+				<img class="main-slider__image" src="img/common.jpg" alt="Sale 2">
+				<a class="main-slider__link" href="#">Кэшбек 10% на самовывоз
+					(доставка)</a>
+			</div>
+			<div class="main-slider__slide swiper-slide">
+				<img class="main-slider__image" src="img/common.jpg" alt="Sale 3">
+				<a class="main-slider__link" href="#">Кэшбек 10% на самовывоз
+					(доставка)</a>
+			</div>
+			<div class="main-slider__slide swiper-slide">
+				<img class="main-slider__image" src="img/common.jpg" alt="Sale 4">
+				<a class="main-slider__link" href="#">3 средние пиццы от 999 рублей</a>
+			</div>
+		</div>
+	</div>
+
+	<form class="main__check-address-form" action="">
+		<p class="main__check-address-text">Проверить адрес доставки
+		</p>
+		<div class="main__check-address-inputs">
+			<input class="main__check-address-input" id="checkAddress" type="text"
+				placeholder="Адрес">
+			<button class="button button-filled send-button main__check-button">
+				<span>Проверить</span>
+				<svg class="icon-send" width="37" height="32" viewBox="0 0 37 32">
+					<title>send</title>
+					<path
+						d="M34.393 12.787l-29.507-12.061c-1.243-0.508-2.647-0.285-3.665 0.583s-1.443 2.205-1.111 3.49l2.626 10.146h12.859c0.592 0 1.072 0.473 1.072 1.056s-0.48 1.056-1.072 1.056h-12.859l-2.626 10.146c-0.333 1.285 0.093 2.622 1.111 3.49 1.020 0.869 2.424 1.090 3.665 0.583l29.507-12.061c1.343-0.549 2.178-1.78 2.178-3.213s-0.834-2.664-2.178-3.213z">
+					</path>
+				</svg>
+			</button>
+		</div>
+	</form>
+</section>
+				<section class="pizza page__pizza food">
+	<div class="food__heading">
+		<h2 class="food__header">Пицца</h2>
+		<button class="button button-outlined-primary food__filter">Фильтры</button>
+
+
+	</div>
+	<div class="food__cards">
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="img/pizza1.jpg" alt="">
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top ">
+					<h3 class="card__title-large food__title">Чикен Сладкий Чили</h3>
+					<p class="card__text-medium food__description">Курица, Лук, Перец
+						Халапеньо, Сыр
+						Моцарелла,
+						Томатный соус, Соус</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price-sale food__sale"><s>от 399 ₽</s></p>
+						<p class="card__price food__price">от 799 ₽</p>
+					</div>
+					<button
+						class="button button-filled card__button-add food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="img/pizza4.jpg" alt="">
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top ">
+					<h3 class="card__title-large food__title">EASY PEASY огуречный
+						расколбас</h3>
+					<p class="card__text-medium food__description">ККурица, Лук, Перец
+						Халапеньо...</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price-sale food__sale"><s>от 549 ₽</s></p>
+						<p class="card__price food__price">от 799 ₽</p>
+					</div>
+					<button
+						class="button button-filled card__button-add food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">Хит</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="img/pizza3.jpg" alt="">
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top ">
+					<h3 class="card__title-large food__title">EASY PEASY чикен а-ля хрен
+					</h3>
+					<p class="card__text-medium food__description">Курица, Лук, Соус
+						Карбонара,...</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price-sale food__sale"><s>от 249 ₽</s></p>
+						<p class="card__price food__price">от 799 ₽</p>
+					</div>
+					<button
+						class="button button-filled card__button-add food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="img/pizza2.jpg" alt="">
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top ">
+					<h3 class="card__title-large food__title">4 сезона</h3>
+					<p class="card__text-medium food__description">Бекон, Ветчина, Грибы,
+						Курица, Лук, Маслины, Огурцы мари...</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price food__price">от 799 ₽</p>
+					</div>
+					<button
+						class="button button-filled card__button-add food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="img/pizza1.jpg" alt="">
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top ">
+					<h3 class="card__title-large food__title">4 сезона</h3>
+					<p class="card__text-medium food__description">Бекон, Ветчина, Грибы,
+						Курица, Лук, Маслины, Огурцы мари...</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price food__price">от 799 ₽</p>
+					</div>
+					<button
+						class="button button-filled card__button-add food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="img/pizza2.jpg" alt="">
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top ">
+					<h3 class="card__title-large food__title">EASY PEASY чикен а-ля хрен
+					</h3>
+					<p class="card__text-medium food__description">Курица, Лук, Соус
+						Карбонара,...</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price food__price">от 799 ₽</p>
+					</div>
+					<button
+						class="button button-filled card__button-add food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="img/pizza3.jpg" alt="">
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top ">
+					<h3 class="card__title-large food__title">Мая Маргарыта</h3>
+					<p class="card__text-medium food__description">Все самое вкусное:
+						масло, маслины, маслории, сырное асорти</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price-sale food__sale"><s>от 322 ₽</s></p>
+						<p class="card__price food__price">от 228 ₽</p>
+					</div>
+					<button
+						class="button button-filled card__button-add food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="img/pizza4.jpg" alt="">
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top ">
+					<h3 class="card__title-large food__title">EASY PEASY огуречный
+						расколбас</h3>
+					<p class="card__text-medium food__description">Курица, Лук, Перец
+						Халапеньо...</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price food__price">от 799 ₽</p>
+					</div>
+					<button
+						class="button button-filled card__button-add food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="card food__card">
+			<img class="food__image" src="img/pizza1.jpg" alt="Пицца">
+			<div class="card__main-content food__card-content">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Чикен Сладкий Чили</h3>
+				</a>
+				<p class="food__description">Курица, Лук, Перец Халапеньо, Сыр
+					Моцарелла,
+					Томатный соус, Соус</p>
+				<div class="food__price-container">
+					<p class="food__price">от 499 ₽</p>
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<img class="food__image" src="img/pizza2.jpg" alt="Пицца">
+			<div class="card__main-content food__card-content">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">EASY PEASY огуречный расколбас</h3>
+				</a>
+				<p class="food__description">Курица, Лук, Перец Халапеньо</p>
+				<div class="food__price-container">
+					<p class="food__price">от 499 ₽</p>
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<img class="food__image" src="img/pizza3.jpg" alt="Пицца">
+			<div class="card__main-content food__card-content">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">EASY PEASY чикен а-ля хрен</h3>
+				</a>
+				<p class="food__description">Курица, Лук, Соус Карбонара, Сыр
+					Моцарелла, Чипсы EASY PEASY...</p>
+				<div class="food__price-container">
+					<p class="food__price">от 499 ₽</p>
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<img class="food__image" src="img/pizza4.jpg" alt="Пицца">
+			<div class="card__main-content food__card-content">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">4 сезона</h3>
+				</a>
+				<p class="food__description">Бекон, Ветчина, Грибы, Курица, Лук,
+					Маслины, Огурцы маринован...</p>
+				<div class="food__price-container">
+					<p class="food__price">от 499 ₽</p>
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<img class="food__image" src="img/pizza1.jpg" alt="Пицца">
+			<div class="card__main-content food__card-content">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Чикен Сладкий Чили</h3>
+				</a>
+				<p class="food__description">Курица, Лук, Перец Халапеньо, Сыр
+					Моцарелла,
+					Томатный соус, Соус</p>
+				<div class="food__price-container">
+					<p class="food__price">от 499 ₽</p>
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<img class="food__image" src="img/pizza2.jpg" alt="Пицца">
+			<div class="card__main-content food__card-content">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">EASY PEASY огуречный расколбас</h3>
+				</a>
+				<p class="food__description">Курица, Лук, Перец Халапеньо...</p>
+				<div class="food__price-container">
+					<p class="food__price">от 499 ₽</p>
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<img class="food__image" src="img/pizza3.jpg" alt="Пицца">
+			<div class="card__main-content food__card-content">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Мая Маргарыта</h3>
+				</a>
+				<p class="food__description">Масло, маслины, маслории, все самое
+					вкусное...</p>
+				<div class="food__price-container">
+					<p class="food__price">от 228 ₽</p>
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<img class="food__image" src="img/pizza4.jpg" alt="Пицца">
+			<div class="card__main-content food__card-content">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">4 сезона</h3>
+				</a>
+				<p class="food__description">Бекон, Ветчина, Грибы, Курица, Лук,
+					Маслины, Огурцы маринован...</p>
+				<div class="food__price-container">
+					<p class="food__price">от 499 ₽</p>
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div> -->
+	</div>
+</section>
+				<section class="sushi page__sushi food">
+	<div class="food__heading">
+		<h2 class="food__header">Суши</h2>
+		<button class="button button-outlined-primary food__filter">Фильтры</button>
+	</div>
+	<div class="food__cards">
+		<div class="food__card">
+			<img class="food__image" src="img/sushi1.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Филадельфия кранч</h3>
+				</a>
+				<p class="food__description">Семга, рис, сыр креметто, соус унаги,
+					креветка, авокадо, чипсы...</p>
+				<div class="food__price-container">
+					<p class="food__price">395 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/sushi2.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Филадельфия крем-брюле</h3>
+				</a>
+				<p class="food__description">Сливочный сыр, семга татаки с тростниковым
+					сахаром, соус унаги</p>
+				<div class="food__price-container">
+					<p class="food__price">425 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/sushi3.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Тигр мама</h3>
+				</a>
+				<p class="food__description">Тигровая креветка, огурец, авокадо, соус
+					Айоли, рис, икра...</p>
+				<div class="food__price-container">
+					<p class="food__price">525 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/sushi4.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Дракон</h3>
+				</a>
+				<p class="food__description">Угорь, рис, огурец, сыр креметто, кунжут,
+					соус унаги</p>
+				<div class="food__price-container">
+					<p class="food__price">465 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/sushi1.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Филадельфия с лососем</h3>
+				</a>
+				<p class="food__description">Семга, королевский авокадо, сыр, обжаренный
+					кунжут и всего 80...</p>
+				<div class="food__price-container">
+					<p class="food__price">485 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/sushi2.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Филадельфия крем-брюле</h3>
+				</a>
+				<p class="food__description">Сливочный сыр, семга татаки с тростниковым
+					сахаром, соус унаги</p>
+				<div class="food__price-container">
+					<p class="food__price">425 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/sushi3.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Тигр мама</h3>
+				</a>
+				<p class="food__description">Тигровая креветка, огурец, авокадо, соус
+					Айоли, рис, икра...</p>
+				<div class="food__price-container">
+					<p class="food__price">525 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/sushi4.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Дракон</h3>
+				</a>
+				<p class="food__description">Угорь, рис, огурец, сыр креметто, кунжут,
+					соус унаги</p>
+				<div class="food__price-container">
+					<p class="food__price">465 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+				<section class="snacs page__snacs food">
+	<div class="food__heading">
+		<h2 class="food__header">Закуски</h2>
+	</div>
+	<div class="food__cards">
+		<div class="food__card">
+			<img class="food__image" src="img/fries.jpg" alt="Картошка фри">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Картофель из печи</h3>
+				</a>
+				<p class="food__description">Ароматный запеченный картофель с
+					итальянскими травами.</p>
+				<div class="food__price-container">
+					<p class="food__price">199 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/strips.jpg" alt="Куриные крылья">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Куриные крылья</h3>
+				</a>
+				<p class="food__description">Куриные крылышки со специями и ароматом
+					копчения.</p>
+				<div class="food__price-container">
+					<p class="food__price">499 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">Хит</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/naggets.jpg" alt="Куриные кусочки">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Куриные кусочки</h3>
+				</a>
+				<p class="food__description">Сочное куриное филе в хрустящей панировке.
+				</p>
+				<div class="food__price-container">
+					<p class="food__price">499 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/roll.jpg" alt="Додстер">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Додстер</h3>
+				</a>
+				<p class="food__description">Легендарная горячая закуска с цыпленком,
+					томатами, моцарела...</p>
+				<div class="food__price-container">
+					<p class="food__price">199 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/fries.jpg" alt="Картошка фри">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Картофель из печи</h3>
+				</a>
+				<p class="food__description">Ароматный запеченный картофель с
+					итальянскими травами.</p>
+				<div class="food__price-container">
+					<p class="food__price">199 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/strips.jpg" alt="Куриные крылья">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Куриные крылья</h3>
+				</a>
+				<p class="food__description">Куриные крылышки со специями и ароматом
+					копчения.</p>
+				<div class="food__price-container">
+					<p class="food__price">499 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">Хит</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+				<section class="desserts page__desserts food">
+	<div class="food__heading">
+		<h2 class="food__header">Десерты</h2>
+	</div>
+	<div class="food__cards">
+		<div class="food__card">
+			<img class="food__image" src="img/cookie1.jpg" alt="Узелки сладкие">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Узелки сладкие</h3>
+				</a>
+				<p class="food__description">Мягкие булочки с корицей и сахарной пудрой
+				</p>
+				<div class="food__price-container">
+					<p class="food__price">149 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/bagel.jpg" alt="Рогалики с клубникой">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Рогалики с клубникой</h3>
+				</a>
+				<p class="food__description">Сладкие рогалики с клубникой, сыром
+					"кремчиз" и сахарной пудр...</p>
+				<div class="food__price-container">
+					<p class="food__price">199 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/naggets.jpg" alt="Сырники">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Сырники</h3>
+				</a>
+				<p class="food__description">Нежные сырники из печи с соусом на выбор
+				</p>
+				<div class="food__price-container">
+					<p class="food__price">159 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/icecream-chocolate.jpg"
+				alt="Магнат Шоколадный трюфель">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Магнат Шоколадный трюфель</h3>
+				</a>
+				<p class="food__description">Шоколадное мороженое с кусочк...</p>
+				<div class="food__price-container">
+					<p class="food__price">139 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/icecream-white.jpg"
+				alt="Магнат Манго и красные ягоды">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Магнат Манго и красные ягоды</h3>
+				</a>
+				<p class="food__description">Мороженое эскимо сливочное c...</p>
+				<div class="food__price-container">
+					<p class="food__price">139 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/icecream-mini.jpg" alt="Магнат Мини">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Магнат Мини</h3>
+				</a>
+				<p class="food__description">Набор из 2 видов мороженого: Магнат
+					Шоколадный трюфель, Ма...</p>
+				<div class="food__price-container">
+					<p class="food__price">499 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/cookie1.jpg" alt="Узелки сладкие">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Узелки сладкие</h3>
+				</a>
+				<p class="food__description">Мягкие булочки с корицей и сахарной пудрой
+				</p>
+				<div class="food__price-container">
+					<p class="food__price">149 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/bagel.jpg" alt="Рогалики с клубникой">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Рогалики с клубникой</h3>
+				</a>
+				<p class="food__description">Сладкие рогалики с клубникой, сыром
+					"кремчиз" и сахарной пудр...</p>
+				<div class="food__price-container">
+					<p class="food__price">199 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+				<section class="drinks page__drinks food">
+	<div class="food__heading">
+		<h2 class="food__header">Напитки</h2>
+	</div>
+	<div class="food__cards">
+		<div class="food__card">
+			<img class="food__image" src="img/adrenalin.jpg"
+				alt="Adrenaline Gamefuel">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Adrenaline Gamefuel</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">149 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/pepsi-zero.jpg" alt="Pepsi MAX">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Pepsi MAX</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">99 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/pepsi.jpg" alt="Pepsi">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Pepsi</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">99 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/pepsi-cherry.jpg"
+				alt="Pepsi Дикая вишня">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Pepsi Дикая вишня</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">99 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/pepsi-light.jpg" alt="Pepsi Light">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Магнат Манго и красные ягоды</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">99 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/mirinda.jpg" alt="Mirinda">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Mirinda</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">99 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+				<section class="sauce page__sauce food">
+	<div class="food__heading">
+		<h2 class="food__header">Соусы</h2>
+	</div>
+	<div class="food__cards">
+		<div class="food__card">
+			<img class="food__image" src="img/cheese-sauce.jpg" alt="Сырный соус">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Сырный соус</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">49 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/bbq-sauce.jpg" alt="Барбекю">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Барбекю</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">99 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/ranch-sauce.jpg" alt="Ранч">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Ранч</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">99 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/condensed-milk.jpg" alt="Сгущёнка">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Сгущёнка</h3>
+				</a>
+				<div class="food__price-container">
+					<p class="food__price">99 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+				<section class="combo page__combo food">
+	<div class="food__heading">
+		<h2 class="food__header">Комбо</h2>
+	</div>
+	<div class="food__cards">
+		<div class="food__card">
+			<img class="food__image" src="img/combo1.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Филадельфия кранч</h3>
+				</a>
+				<p class="food__description">Семга, рис, сыр креметто, соус унаги,
+					креветка, авокадо, чипсы...</p>
+				<div class="food__price-container">
+					<p class="food__price">395 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/combo2.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Филадельфия крем-брюле</h3>
+				</a>
+				<p class="food__description">Сливочный сыр, семга татаки с тростниковым
+					сахаром, соус унаги</p>
+				<div class="food__price-container">
+					<p class="food__price">425 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/combo4.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Тигр мама</h3>
+				</a>
+				<p class="food__description">Тигровая креветка, огурец, авокадо, соус
+					Айоли, рис, икра...</p>
+				<div class="food__price-container">
+					<p class="food__price">525 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/combo3.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Дракон</h3>
+				</a>
+				<p class="food__description">Угорь, рис, огурец, сыр креметто, кунжут,
+					соус унаги</p>
+				<div class="food__price-container">
+					<p class="food__price">465 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/combo1.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Филадельфия с лососем</h3>
+				</a>
+				<p class="food__description">Семга, королевский авокадо, сыр, обжаренный
+					кунжут и всего 80...</p>
+				<div class="food__price-container">
+					<p class="food__price">485 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/combo2.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Филадельфия крем-брюле</h3>
+				</a>
+				<p class="food__description">Сливочный сыр, семга татаки с тростниковым
+					сахаром, соус унаги</p>
+				<div class="food__price-container">
+					<p class="food__price">425 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/combo4.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Тигр мама</h3>
+				</a>
+				<p class="food__description">Тигровая креветка, огурец, авокадо, соус
+					Айоли, рис, икра...</p>
+				<div class="food__price-container">
+					<p class="food__price">525 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+		<div class="food__card">
+			<img class="food__image" src="img/combo3.jpg" alt="Суши">
+			<div class="food__card-text">
+				<a class="food__link link-primary" href="">
+					<h3 class="food__title">Дракон</h3>
+				</a>
+				<p class="food__description">Угорь, рис, огурец, сыр креметто, кунжут,
+					соус унаги</p>
+				<div class="food__price-container">
+					<p class="food__price">465 ₽</p>
+					<!-- <p class="food__sale">от 699 ₽</p> -->
+					<button class="button button-filled food__select">Выбрать</button>
+				</div>
+				<div class="card__label food__card-label">New</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+				<div class="delivery page__delivery">
+					<input type="checkbox" class="read-more-checker"
+						id="read-more-checker">
+					<div class="limiter">
+						<h2 class="delivety__title">Доставка пиццы в Москве</h2>
+						<p class="delivery__text">Захотелось чего-то вкусного и сытного?
+							Желание простое и понятное, только в холодильнике все не то, и до
+							магазина идти лень. Все пропало? Нет. Недорого заказать пиццу в
+							Москве очень просто! Вам на помощь спешит супергерой – Domino's
+							Pizza! Как у всякого супергероя, у Domino's Pizza есть свои
+							суперсилы: восхитительный вкус продукции из отборных ингредиентов;
+							широкий ассортимент, включающий легендарные, фирменные и
+							классические виды, для вегетарианцев и любителей
+							экспериментировать;
+							быстрая и бесплатная доставка пиццы в течение 30 минут, чтобы
+							вкусное и ароматное блюдо не успевало остыть.</p>
+						<h4 class="delivery__text-subheader">Как сделать заказ</h4>
+						<p class="delivery__text">Доставка пиццы от Domino's – это когда
+							Вам не нужно никуда ехать или
+							звонить, ведь есть Интернет. Никогда еще заказ пиццы на дом в
+							Москве
+							не был таким простым! Чтобы заказать пиццу онлайн, Вам необходимо:
+							выбрать понравившийся вариант и количество порций; положить
+							желаемое
+							в «Корзину»; не уходить далеко, так как вкусная пицца на заказ с
+							доставкой уже мчится к Вам из ближайшей пиццерии Domino's. И не
+							забудьте оплатить заказ курьеру!</p>
+						<!-- <button class="delivery__read-more">Подробнее</button> -->
+						<div class="overflow-hidder"></div>
+					</div>
+					<label for="read-more-checker"
+						class="read-more-button delivery__read-more"></label>
+				</div>
+			</div>
+
+			<div class="menu-blured-bg filter page__filter">
+	<div class="menu-wrapper filter__wrapper">
+		<button tabindex="0" class="button-close-menu-mobile filter__close">
+			<span class="visually-hidden">Закрыть меню</span>
+		</button>
+
+		<div class="menu-content filter__content">
+			<div class="filter__top">
+				<h2 class="filter__heading">Фильтры</h2>
+				<button class="filter__close">
+					<svg class="icon-close" role="img" aria-hidden="true" width="32"
+						height="32" viewBox="0 0 32 32">
+						<title>Закрыть фильтры</title>
+						<path
+							d="M1.776 0.305c-0.406-0.406-1.065-0.406-1.471 0s-0.406 1.065 0 1.471l14.224 14.224-14.224 14.224c-0.406 0.406-0.406 1.065 0 1.471s1.065 0.406 1.471 0l14.224-14.224 14.224 14.224c0.406 0.406 1.065 0.406 1.471 0s0.406-1.065 0-1.471l-14.224-14.224 14.224-14.224c0.406-0.406 0.406-1.065 0-1.471s-1.065-0.406-1.471 0l-14.224 14.224-14.224-14.224z">
+						</path>
+					</svg>
+					<span class="visually-hidden">Закрыть фильтры</span>
+				</button>
+			</div>
+
+			<div class="filter__categories">
+
+				<div class="filter__catgory general filter__general">
+					<h3 class="filter__category-heading">Общее</h3>
+					<ul class="filter__list">
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="hit" name="general" value="hit">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="hit">Хит</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="new" name="general" value="new">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="new">Новинка</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="meat" name="general" value="meat">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="meat">С мясом</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="vegiterian" name="general" value="vegiterian">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="vegiterian">Вегетарианская</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="chiken" name="general" value="chiken">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="chiken">С курицей</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="no-onion" name="general" value="no-onion">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="no-onion">Без лука</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="mushrooms" name="general" value="mushrooms">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="mushrooms">С грибами</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="seefood" name="general" value="seefood">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="seefood">С морепродуктами</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="bbq" name="general" value="bbq">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="bbq">Барбекью</label>
+						</li>
+					</ul>
+				</div>
+
+				<div class="filter__catgory cheese filter__cheese">
+					<h3 class="filter__category-heading">Сыр</h3>
+					<ul class="filter__list">
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="reggianito" name="cheese" value="reggianito">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="reggianito">Реджанито</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="mozzarella" name="cheese" value="mozzarella">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="mozzarella">Моцарелла</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="cheddar" name="cheese" value="cheddar">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="cheddar">Чеддер</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="with-blue-mold" name="cheese" value="with-blue-mold">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="with-blue-mold">С голубой плесенью</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="chese-mix" name="cheese" value="chese-mix">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="chese-mix">Смесь итальянских сыров</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="soft-young-cheese" name="cheese" value="soft-young-cheese">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="soft-young-cheese">Мягкий молодой сыр</label>
+						</li>
+					</ul>
+				</div>
+
+				<div class="filter__catgory meat filter__meat">
+					<h3 class="filter__category-heading">Мясо</h3>
+					<ul class="filter__list">
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="pepperoni" name="meat" value="pepperoni">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="pepperoni">Пепперони</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="pork" name="meat" value="pork">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="pork">Свинина</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="ham" name="meat" value="ham">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="ham">Ветчина</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="becon" name="meat" value="becon">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="becon">Бекон</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="beef" name="meat" value="beef">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="beef">Говядина</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="chorizo" name="meat" value="chorizo">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="chorizo">Бекон</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="sausages" name="meat" value="sausages">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="sausages">Колбаски</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="chicken-breast" name="meat" value="chicken-breast">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="chicken-breast">Куриная грудка</label>
+						</li>
+					</ul>
+				</div>
+
+				<div class="filter__catgory ingridient filter__ingridient">
+					<h3 class="filter__category-heading">Компонент</h3>
+					<ul class="filter__list">
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="shrimp" name="ingridient" value="shrimp">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="shrimp">Креветка</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="peanapples" name="ingridient" value="peanapples">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="peanapples">Ананасы</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="champignons" name="ingridient" value="champignons">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="champignons">Шампиньоны</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="onion" name="ingridient" value="onion">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="onion">Лук</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="jalapeno" name="ingridient" value="jalapeno">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="jalapeno">Перец халапеньо</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="oregano" name="ingridient" value="oregano">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="oregano">Перец халапеньо</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="green-papper" name="ingridient" value="green-papper">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="green-papper">Зеленый перец</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="tomatoes" name="ingridient" value="tomatoes">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="tomatoes">Томаты</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="garlic" name="ingridient" value="garlic">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="garlic">Чеснок</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="red-pepper" name="ingridient" value="red-pepper">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="red-pepper">Красный перец</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="olives" name="ingridient" value="olives">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="olives">Оливки</label>
+						</li>
+						<li class="filter__list-item">
+							<input class="filter__checkbox visually-hidden" type="checkbox"
+								id="italian-herb" name="ingridient" value="italian-herb">
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="italian-herb">Смесь итальянских трав</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="filter__buttons">
+				<button
+					class="button button-outlined-primary filter__reset">Сбросить</button>
+				<button
+					class="button button-filled filter__option-primary filter__apply">Применить</button>
+			</div>
+		</div>
+	</div>
+</div>
+			<div class="menu-blured-bg cart-menu page__cart-menu">
+	<div class="menu-wrapper cart-menu__wrapper">
+		<button tabindex="0" class="button-close-menu-mobile cart-menu__close">
+			<span class="visually-hidden">Закрыть меню</span>
+		</button>
+		<div class="menu-content cart-menu__content">
+			<div class="cart-menu__top">
+				<h2 class="cart-menu__heading">Ваш заказ</h2>
+				<button class="cart-menu__close">
+					<svg class="icon-close" role="img" aria-hidden="true" width="32"
+						height="32" viewBox="0 0 32 32">
+						<title>Закрыть фильтры</title>
+						<path
+							d="M1.776 0.305c-0.406-0.406-1.065-0.406-1.471 0s-0.406 1.065 0 1.471l14.224 14.224-14.224 14.224c-0.406 0.406-0.406 1.065 0 1.471s1.065 0.406 1.471 0l14.224-14.224 14.224 14.224c0.406 0.406 1.065 0.406 1.471 0s0.406-1.065 0-1.471l-14.224-14.224 14.224-14.224c0.406-0.406 0.406-1.065 0-1.471s-1.065-0.406-1.471 0l-14.224 14.224-14.224-14.224z">
+						</path>
+					</svg>
+					<span class="visually-hidden">Закрыть фильтры</span>
+				</button>
+			</div>
+
+			<div class="order cart-menu__order">
+				<ul class="order__list">
+
+					<li class="order__list-item">
+						<img class="order__item-image" src="img/pizza1.jpg" alt="Пицца">
+						<div class="order__item-info">
+							<div class="order__item-text">
+								<h3 class="order__item-title cart-menu__order-item-title">Чикен
+									Сладкий Чили</h3>
+								<p class="order__item-details cart-menu__order-item-details">
+									Традиционное тесто, 23 см
+								</p>
+							</div>
+							<div class="order__price-quantity">
+								<div class="order__item-controls">
+									<button class="hide-text order__remove-item">Уменьшить на
+										один</button>
+									<p class="order__item-quantity">1</p>
+									<button class="hide-text order__add-item">Увеличить на
+										один</button>
+								</div>
+								<p class="order__item-price cart-menu__order-price">499 ₽</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="order__list-item">
+						<img class="order__item-image" src="img/pizza2.jpg" alt="Пицца">
+						<div class="order__item-info">
+							<div class="order__item-text">
+								<h3 class="order__item-title cart-menu__order-item-title">Чикен
+									Сладкий Чили</h3>
+								<p class="order__item-details cart-menu__order-item-details">
+									Традиционное тесто, 23 см
+								</p>
+							</div>
+							<div class="order__price-quantity">
+								<div class="order__item-controls">
+									<button class="hide-text order__remove-item">Уменьшить на
+										один</button>
+									<p class="order__item-quantity">1</p>
+									<button class="hide-text order__add-item">Увеличить на
+										один</button>
+								</div>
+								<p class="order__item-price">499 ₽</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="order__list-item">
+						<img class="order__item-image" src="img/pizza3.jpg" alt="Пицца">
+						<div class="order__item-info">
+							<div class="order__item-text">
+								<h3 class="order__item-title cart-menu__order-item-title">Чикен
+									Сладкий Чили</h3>
+								<p class="order__item-details cart-menu__order-item-details">
+									Традиционное тесто, 23 см
+								</p>
+							</div>
+							<div class="order__price-quantity">
+								<div class="order__item-controls">
+									<button class="hide-text order__remove-item">Уменьшить на
+										один</button>
+									<p class="order__item-quantity">1</p>
+									<button class="hide-text order__add-item">Увеличить на
+										один</button>
+								</div>
+								<p class="order__item-price">499 ₽</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="order__list-item">
+						<img class="order__item-image" src="img/pizza4.jpg" alt="Пицца">
+						<div class="order__item-info">
+							<div class="order__item-text">
+								<h3 class="order__item-title cart-menu__order-item-title">Чикен
+									Сладкий Чили</h3>
+								<p class="order__item-details cart-menu__order-item-details">
+									Традиционное тесто, 23 см
+								</p>
+							</div>
+							<div class="order__price-quantity">
+								<div class="order__item-controls">
+									<button class="hide-text order__remove-item">Уменьшить на
+										один</button>
+									<p class="order__item-quantity">1</p>
+									<button class="hide-text order__add-item">Увеличить на
+										один</button>
+								</div>
+								<p class="order__item-price">499 ₽</p>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="summary">
+				<div class="summary__numbers">
+					<p class="summary__sum">Итого: 397 ₽</p>
+				</div>
+				<button class="button button-filled summary__button">Оформить
+					заказ</button>
+			</div>
+		</div>
+	</div>
+</div>
+			<div class="product menu-blured-bg page__product">
+	<div class="menu-wrapper product__wrapper">
+		<button tabindex="0" class="button-close-menu-mobile product__close">
+			<svg class="icon-close" role="img" aria-hidden="true" width="32"
+				height="32" viewBox="0 0 32 32">
+				<title>Закрыть меню</title>
+				<path
+					d="M1.776 0.305c-0.406-0.406-1.065-0.406-1.471 0s-0.406 1.065 0 1.471l14.224 14.224-14.224 14.224c-0.406 0.406-0.406 1.065 0 1.471s1.065 0.406 1.471 0l14.224-14.224 14.224 14.224c0.406 0.406 1.065 0.406 1.471 0s0.406-1.065 0-1.471l-14.224-14.224 14.224-14.224c0.406-0.406 0.406-1.065 0-1.471s-1.065-0.406-1.471 0l-14.224 14.224-14.224-14.224z">
+				</path>
+			</svg>
+			<span class="visually-hidden">Закрыть меню</span>
+		</button>
+		<div class="menu-content product__content">
+			<div class="product__image-container">
+				<img class="product__image" src="img/pizza1.jpg" alt="Product image">
+			</div>
+			<div class="card__label product-label">New</div>
+			<div class="product__options-container">
+				<div class="product__options">
+					<div class="product__base">
+						<div class="product__top">
+							<h2 class="product__name">Пепперони по-деревенски</h2>
+							<button class="hide-text product__details">Детали</button>
+						</div>
+
+						<div class="swiper-container product__ingredients">
+							<div class="swiper-wrapper product__ingredients-wrapper">
+								<div class="swiper-slide product__ingredient">
+									<!-- <input class="product__checkbox visually-hidden" type="checkbox"
+										id="mocarella" name="preset_ingredients" value="mocarella">
+									<label
+										class="product__ingredient-image-container choose-label choose-label-outlined product__ingredient-label"
+										for="mocarella"><img class="product__ingredient-image"
+											src="img/cheese.svg" alt="">
+									</label> -->
+									<div class="product__ingredient-image-container"><img
+											class="product__ingredient-image" src="img/cheese.svg"
+											alt="">
+									</div>
+									<p class="product__ingredient-name">Моцарелла</p>
+								</div>
+								<div class="swiper-slide product__ingredient">
+									<div class="product__ingredient-image-container">
+										<img class="product__ingredient-image" src="img/cheese.svg"
+											alt="">
+									</div>
+									<p class="product__ingredient-name">Пармезан</p>
+								</div>
+								<div class="swiper-slide product__ingredient">
+									<div class="product__ingredient-image-container"><img
+											class="product__ingredient-image" src="img/pepperone.svg"
+											alt="">
+									</div>
+									<p class="product__ingredient-name">Пепперони</p>
+								</div>
+								<div class="swiper-slide product__ingredient">
+									<div class="product__ingredient-image-container"><img
+											class="product__ingredient-image"
+											src="img/souce-outline.svg" alt="">
+									</div>
+									<p class="product__ingredient-name">Томатный соус</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__adjustments">
+						<ul class="product__specification-list">
+							<li class="product__specification-list-item">
+								<input class="visually-hidden product__specification-radio"
+									type="radio" name="specification" id="spec_one">
+								<label
+									class="choose-label choose-label-filled  product__specification-item"
+									for="spec_one">Традиционное</label>
+							</li>
+							<li class="product__specification-list-item">
+								<input class="visually-hidden product__specification-radio"
+									type="radio" name="specification" id="spec_two">
+								<label
+									class="choose-label choose-label-filled  product__specification-item"
+									for="spec_two">Тонкое</label>
+							</li>
+						</ul>
+						<ul class="product__size-list">
+							<li class="product__size-list-item">
+								<input class="visually-hidden product__size-radio" type="radio"
+									name="size" id="size_one">
+								<label
+									class="choose-label choose-label-filled  product__size-item"
+									for="size_one">20
+									см</label>
+							</li>
+							<li class="product__size-list-item">
+								<input class="visually-hidden product__size-radio" type="radio"
+									name="size" id="size_two">
+								<label
+									class="choose-label choose-label-filled  product__size-item"
+									for="size_two">28
+									см</label>
+							</li>
+							<li class="product__size-list-item">
+								<input class="visually-hidden product__size-radio" type="radio"
+									name="size" id="size_three">
+								<label
+									class="choose-label choose-label-filled  product__size-item"
+									for="size_three">33
+									см</label>
+							</li>
+						</ul>
+					</div>
+
+					<div class="product__add">
+						<h3 class="product__add-ingredients">Добавьте в пиццу</h3>
+						<div class="swiper-container product__ingredients">
+							<div class="swiper-wrapper product__ingredients-wrapper">
+								<div class="swiper-slide product__ingredient">
+									<div class="product__ingredient-image-container">
+										<img class="product__ingredient-image" src="img/cheese.svg"
+											alt="">
+									</div>
+									<p class="product__ingredient-name">Чеддер</p>
+									<p class="product__ingredient-price">59 ₽</p>
+								</div>
+								<div class="swiper-slide product__ingredient">
+									<div class="product__ingredient-image-container"><img
+											class="product__ingredient-image" src="img/mushrooms.svg"
+											alt="">
+									</div>
+									<p class="product__ingredient-name">Шампиньоны</p>
+									<p class="product__ingredient-price">59 ₽</p>
+								</div>
+								<div class="swiper-slide product__ingredient">
+									<div class="product__ingredient-image-container"><img
+											class="product__ingredient-image" src="img/onion.svg"
+											alt="">
+									</div>
+									<p class="product__ingredient-name">Красный лук</p>
+									<p class="product__ingredient-price">59 ₽</p>
+								</div>
+								<div class="swiper-slide product__ingredient">
+									<div class="product__ingredient-image-container"><img
+											class="product__ingredient-image"
+											src="img/sweet-pepper.svg" alt="">
+									</div>
+									<p class="product__ingredient-name">Очень сладкий перец</p>
+									<p class="product__ingredient-price">59 ₽</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="summary">
+					<div class="summary__numbers">
+						<p class="summary-sum">Итого: 397 ₽</p>
+						<p class="summary__weight">400 г</p>
+					</div>
+					<button class="button button-filled summary__button">Оформить
+						заказ</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			<div class="menu-blured-bg login-menu page__login-menu">
+	<div class="menu-wrapper login-menu__wrapper">
+		<button tabindex="0" class="login-menu__close">
+			<svg class="icon-close" role="img" aria-hidden="true" width="32"
+				height="32" viewBox="0 0 32 32">
+				<title>Закрыть меню</title>
+				<path
+					d="M1.776 0.305c-0.406-0.406-1.065-0.406-1.471 0s-0.406 1.065 0 1.471l14.224 14.224-14.224 14.224c-0.406 0.406-0.406 1.065 0 1.471s1.065 0.406 1.471 0l14.224-14.224 14.224 14.224c0.406 0.406 1.065 0.406 1.471 0s0.406-1.065 0-1.471l-14.224-14.224 14.224-14.224c0.406-0.406 0.406-1.065 0-1.471s-1.065-0.406-1.471 0l-14.224 14.224-14.224-14.224z">
+				</path>
+			</svg>
+			<span class="visually-hidden">Закрыть меню</span>
+		</button>
+
+		<div class="menu-content login-menu__content">
+			<div class="login-menu__content-wrapper">
+				<h2 class="login-menu__heading">Вход в аккаунт</h2>
+				<p class="login-menu__subheading">Сможете быстро оформлять заказы,
+					использовать бонусы</p>
+				<form class="login-menu__form" action="" method="post">
+					<label class="login-menu__phone-label" for="login-menu__phone">Номер
+						телефона</label>
+					<input class="login-menu__phone" type="tel" placeholder="+7"
+						id="login-menu_phone">
+					<button class="button button-filled login-menu__button">Войти</button>
+				</form>
+				<p class="login-menu__disclaimer">Продолжая, вы соглашаетесь со сбором и
+					обработкой персональных данных и пользовательским соглашением</p>
+			</div>
+		</div>
+
+		<!-- <div class="menu-content login-menu__content">
+			<div class="login-menu__content-wrapper">
+				<h2 class="login-menu__heading">Код из смс</h2>
+				<p class="login-menu__subheading">На номер +7 (926) 223-10-11</p>
+				<form class="login-menu__form-code">
+					<div class="login-menu__form-code-numbers">
+						<input class="login-menu__code" maxlength="1" type="text"
+							placeholder="X" id="login-menu_code_1">
+						<input class="login-menu__code" maxlength="1" type="text"
+							placeholder="X" id="login-menu_code_2">
+						<input class="login-menu__code" maxlength="1" type="text"
+							placeholder="X" id="login-menu_code_3">
+						<input class="login-menu__code" maxlength="1" type="text"
+							placeholder="X" id="login-menu_code_4">
+					</div>
+					<button class="button button-filled login-menu__button">Войти</button>
+				</form>
+				<p class="login-menu__send-again">Отправить код ещё раз через:
+					<span class="login-menu__send--countdown login-menu__send--ready">59
+						секунд</span>
+				</p>
+			</div>
+		</div> -->
+	</div>
+</div>
+
+		</main>
+		<div class="footer">
+	<div class="footer__container">
+		<div class="footer__logo-col">
+			<a class="logo link-primary logo__link footer__logo" href="">
+				<img class="logo__img" src="img/logo.svg" alt="logo">
+			</a>
+			<p class="footer__copy">© Copyright 2021 — Куда Пицца</p>
+		</div>
+		<div class="footer__about">
+			<h3 class="footer__title">Куда пицца</h3>
+			<ul class="footer__list">
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">О компании</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Пользовательское
+						соглашение</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Условия гарантии</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__help">
+			<ul class="footer__list">
+				<h3 class="footer__title">Помощь</h3>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Ресторан</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Контакты</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Поддержка</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__link link-primary" href="#">Отследить заказ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__contacts contacts">
+			<h3 class="footer__title">Контакты</h3>
+			<a class="contacts__phone contact-align-text link-primary footer__socials-link"
+				href="tel:+79262231011">+7
+				(926) 223-10-11</a>
+			<a class="contacts__address contact-align-text link-primary footer__socials-link"
+				href="#">Москва, ул. Юных
+				Ленинцев, д.99</a>
+			<div class="contacts__socials">
+				<a class="contacts__facebook contact-align-text link-primary footer__socials-link"
+					href="#">Facebook</a>
+				<a class="contacts__instagram contact-align-text link-primary footer__socials-link"
+					href="#">Instagram</a>
+			</div>
+		</div>
+	</div>
+	<hr class="separator footer__separator">
+	<p class="footer__copy-clone">© Copyright 2021 — Куда Пицца</p>
+</div>
+
+	</div>
+	<script
+		src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

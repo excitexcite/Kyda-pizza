@@ -1,0 +1,140 @@
+@use "abstract" as *;
+@use "base" as *;
+@use "sass:math";
+
+///@at-root
+/// card-menu mobile f14 lh18 pc f16 lh20
+/// main card mobile f14 lh18 pc f18 lh 24
+/// card slider f14 lh18 pc f18 lh24
+/// card mobile f14 lh18 pc f20 lh28
+.card__title-small {
+	font-weight: 600;
+	@include adaptive-font(14, 16);
+	@include adaptive-value("line-height", 20, 18, 1);
+}
+
+.card__title-medium {
+	font-weight: 600;
+	@include adaptive-font(14, 18);
+	// @include adaptive-value("line-height", 24, 18, 1);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(24, 16);
+	}
+}
+
+.card__title-large {
+	font-weight: 600;
+	@include adaptive-font(14, 20);
+	@include adaptive-value("line-height", 28, 18, 1);
+}
+
+/// card-menu mobile f12 lh16 pc f14 lh18
+/// card slider f lh pc f14 lh18
+/// main card mobile f12 lh16 pc f16 lh22
+/// card mobile f12 lh16 pc f16 lh22
+.card__text-small {
+	@include adaptive-font(12, 14);
+	@include adaptive-value("line-height", 18, 16, 1);
+}
+
+.card__text-medium {
+	@include adaptive-font(12, 16);
+	@include adaptive-value("line-height", 22, 16, 1);
+}
+
+/// main card mobile f lh pc f16 lh22
+/// card slider f lh pc f16 lh28
+.card__button {
+	font-size: rem(16);
+	line-height: math.div(22, 16);
+}
+
+.card__button-slider {
+	font-size: rem(16);
+	line-height: math.div(28, 16);
+}
+
+/// select-foodv f18 lh22 pc f20 lh28
+/// cart-menu f18 lh22 pc f20 lh28
+/// cart f18 lh22 pc f20 lh28
+.summary-sum {
+}
+
+.card {
+	display: flex;
+	height: auto;
+	// width: auto;
+	column-gap: 12px;
+	row-gap: 16px;
+	border-radius: 12px;
+	background-color: $clr-white;
+}
+
+.card__image-container {
+	align-self: center;
+}
+
+.card__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	object-fit: cover;
+}
+
+.card__main-content {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+}
+
+.card__content-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: auto;
+	gap: rem(10);
+	width: 100%;
+}
+
+.card__price-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/// main card mobile f14 lh18 bg-pr-light pc f18 lh24 no-bg
+/// card-menu mobile f14 lh18 no-bg pc f16 lh20 no-bg
+/// card mobile f14 lh18 no-bg pc f20 lh28
+/// card slider f14 lh16 bg-pr-light pc f lh
+.card__price {
+	align-self: center;
+	padding: rem(7) rem(16);
+	font-weight: 600;
+	color: $primary;
+	border-radius: 6px;
+}
+
+.card__price-sale {
+	align-self: center;
+	padding: rem(7) rem(16);
+	@include adaptive-font(14, 18);
+	color: $grey-text;
+	// text-decoration: line-through;
+}
+
+.card__label {
+	position: absolute;
+	background-color: $red;
+	color: $clr-white;
+	text-transform: uppercase;
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+	@include adaptive-value("padding-block", 7, 4, 1, em);
+	@include adaptive-value("padding-inline", 16, 8, 1, em);
+	line-height: math.div(18, 16);
+	@include adaptive-font(12, 14);
+}

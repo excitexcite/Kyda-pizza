@@ -1,0 +1,225 @@
+@use "abstract" as *;
+@use "base" as *;
+@use "sass:math";
+
+.button {
+	@include adaptive-font(14, 16);
+	// @include adaptive-value("line-height", 22, 18, 1);
+	line-height: math.div(22, 16);
+	border-radius: 6px;
+
+	@media (hover: hover) {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.button-filled {
+	color: $clr-white;
+	background-color: $primary;
+	transition: color $buttonTransition ease-in-out 0ms,
+		background-color $buttonTransition ease-in-out 0ms;
+
+	@media (hover: hover) {
+		&:hover {
+			color: $primary;
+			background-color: $clr-black;
+		}
+	}
+
+	&:active {
+		color: $primary;
+		background-color: $clr-black;
+		outline: 3px solid $primary;
+		outline-offset: 2px;
+	}
+}
+
+.button-outlined-primary {
+	color: $primary;
+	background-color: $clr-white;
+	border: solid 1px $primary;
+	transition: color $buttonTransition ease-in-out 0ms,
+		background-color $buttonTransition ease-in-out 0ms,
+		border-color $buttonTransition ease-in-out 0ms;
+
+	@media (hover: hover) {
+		&:hover {
+			color: $clr-black;
+			border-color: $clr-black;
+			background-color: $primary-light;
+		}
+	}
+}
+
+.button-outlined {
+	color: $clr-black;
+	background-color: $clr-white;
+	border: solid 1px $grey-line;
+	transition: color $buttonTransition ease-in-out 0ms,
+		background-color $buttonTransition ease-in-out 0ms,
+		border-color $buttonTransition ease-in-out 0ms;
+
+	@media (hover: hover) {
+		&:hover {
+			color: $primary;
+			border-color: $primary;
+		}
+	}
+
+	&--active {
+		color: $clr-white;
+		background-color: $primary;
+		border-color: $primary;
+	}
+}
+
+.icon-close {
+	// fill: $grey-text;
+	// fill: red;
+	width: 32px;
+	height: 32px;
+
+	@media (hover: hover) {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.icon-arrow {
+	// fill: $grey-text;
+	// fill: red;
+	width: 32px;
+	height: 32px;
+}
+
+.arrow-right {
+	transform: rotate(-90deg);
+}
+
+.arrow-left {
+	transform: rotate(90deg);
+}
+
+.icon-send {
+	width: rem(16);
+	height: rem(16);
+}
+
+.button-slider {
+	display: inline-flex;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background-color: $primary;
+	fill: $clr-white;
+
+	& svg {
+		align-self: center;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.button-close-menu-mobile {
+	position: absolute;
+	right: 50%;
+	top: -20px;
+	transform: translate(50%, 50%);
+	min-width: 134px;
+	height: 5px;
+	border-radius: 2.5px;
+	background-color: $grey-line;
+	z-index: 10;
+	cursor: pointer;
+
+	&:active {
+		outline: none;
+		background-color: $primary;
+	}
+
+	@include mqm(500) {
+		transform: translate(0, 0);
+		border-radius: 0;
+		background-color: transparent;
+		min-width: fit-content;
+		height: auto;
+
+		&:active {
+			background-color: initial;
+			fill: $primary;
+		}
+	}
+}
+
+.button-close-menu {
+	width: 24px;
+	height: 24px;
+	background-image: url("../img/icons.svg#cross-square");
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@media (hover: hover) {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.send-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: rem(44);
+	min-height: rem(44);
+	fill: $clr-white;
+}
+
+.choose-label {
+	@include adaptive-font(14, 16);
+	@include adaptive-value("line-height", 22, 18, 1);
+	border-radius: 6px;
+
+	@media (hover: hover) {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.choose-label-outlined {
+	color: $clr-black;
+	background-color: $clr-white;
+	border: solid 1px $grey-line;
+	transition: color $buttonTransition ease-in-out 0ms,
+		border-color $buttonTransition ease-in-out 0ms;
+
+	@media (hover: hover) {
+		&:hover {
+			color: $primary;
+			border-color: $primary;
+		}
+	}
+}
+
+.choose-label-filled {
+	color: $clr-black;
+	background-color: $clr-white;
+	transition: color $buttonTransition ease-in-out 0ms,
+		background-color $buttonTransition ease-in-out 0ms;
+
+	@media (hover: hover) {
+		&:hover {
+			color: $clr-white;
+			background-color: $primary;
+		}
+	}
+}

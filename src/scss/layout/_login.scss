@@ -1,0 +1,169 @@
+@use "abstract" as *;
+@use "base" as *;
+@use "sass:math";
+
+.login-menu__wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 0;
+	max-width: rem(850);
+
+	@include mqm(768) {
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		transform: translate(50%, -50%);
+		width: 90%;
+	}
+}
+
+.login-menu__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: transparent;
+	fill: $grey-line;
+	z-index: 10;
+	transition: fill $buttonTransition ease-in-out;
+
+	& .icon-close {
+		width: 24px;
+		height: 24px;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			fill: $clr-black;
+		}
+	}
+
+	@include mqm(1000) {
+		top: 0;
+		right: -60px;
+		fill: $clr-white;
+
+		& .icon-close {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.login-menu__content {
+	display: flex;
+	justify-content: center;
+	flex-basis: 100%;
+	border-radius: 0;
+
+	@include mqm(768) {
+		border-radius: 24px;
+		max-height: rem(450);
+	}
+}
+
+.login-menu__content-wrapper {
+	align-self: center;
+	margin: 0 rem(10);
+
+	@include mqm(390) {
+		max-width: rem(350);
+	}
+
+	@include mqm(768) {
+		max-width: rem(320);
+	}
+}
+
+.login-menu__heading {
+	margin-bottom: rem(16);
+	font-weight: 600;
+	@include adaptive-font(28, 32);
+	@include adaptive-value("line-height", 40, 32, 1);
+	text-align: center;
+}
+
+.login-menu__subheading {
+	@include adaptive-font(14, 16);
+	@include adaptive-value("line-height", 22, 18, 1);
+	margin-bottom: rem(20);
+	text-align: center;
+}
+
+.login-menu__form {
+	display: flex;
+	flex-flow: column;
+}
+
+.login-menu__form-code {
+	display: flex;
+	flex-flow: column;
+	@include adaptive-value("gap", 16, 12, 1);
+}
+
+.login-menu__form-code-numbers {
+	display: flex;
+	justify-content: space-between;
+}
+
+.login-menu__phone-label {
+	color: $grey-text;
+	@include adaptive-font(12, 14);
+	@include adaptive-value("line-height", 18, 16, 1);
+	margin-bottom: rem(8);
+}
+
+.login-menu__phone {
+	@include adaptive-value("margin-bottom", 16, 12, 1);
+	padding: rem(13) 0 rem(13) rem(16);
+
+	&::placeholder {
+		color: $grey-text;
+		@include adaptive-font(14, 16);
+		@include adaptive-value("line-height", 22, 18, 1);
+	}
+}
+
+.login-menu__button {
+	padding: rem(13) 0;
+	color: $clr-white;
+	background-color: $primary;
+	@include adaptive-font(14, 16);
+	@include adaptive-value("line-height", 22, 18, 1);
+}
+
+.login-menu__send-again,
+.login-menu__disclaimer {
+	margin-top: rem(12);
+	color: $grey-text;
+	@include adaptive-font(12, 14);
+	@include adaptive-value("line-height", 18, 16, 1);
+	text-align: center;
+}
+
+.login-menu__code {
+	padding: rem(13) 0;
+	max-width: rem(44);
+	text-align: center;
+
+	&::placeholder {
+		color: $grey-text;
+		@include adaptive-value("line-height", 22, 18, 1);
+	}
+
+	@include mqm(768) {
+		max-width: rem(48);
+	}
+}
+
+.login-menu__send {
+	@include adaptive-font(12, 14);
+	@include adaptive-value("line-height", 18, 16, 1);
+
+	&--countdown {
+		color: $grey-text;
+	}
+
+	&--active {
+		color: $grey-text;
+	}
+}

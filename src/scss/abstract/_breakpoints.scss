@@ -1,0 +1,46 @@
+@use "_variables.scss" as *;
+
+$breakpoints: (
+	/* 320 px */ "mobileS": 20em,
+	/* 480 px */ "mobileM": 30em,
+	/* 768 px */ "tabletS": 48em,
+	/* 834 px */ "tabletM": 52.125em,
+	/* 960 px */ "tabletL": 60em,
+	/* 1280 px */ "laptop": 80em
+);
+
+@mixin mobileS {
+	@media (max-width: map-get($breakpoints, "mobileS")) {
+		@content;
+	}
+}
+
+@mixin mobileM {
+	@media (max-width: map-get($breakpoints, "mobileM")) {
+		@content;
+	}
+}
+
+@mixin tabletS {
+	@media (max-width: map-get($breakpoints, "tabletS")) {
+		@content;
+	}
+}
+
+@mixin tabletM {
+	@media (max-width: map-get($breakpoints, "tabletM")) {
+		@content;
+	}
+}
+
+@mixin tabletL {
+	@media (max-width: map-get($breakpoints, "tabletL")) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (max-width: map-get($breakpoints, "laptop")) {
+		@content;
+	}
+}

@@ -1,0 +1,193 @@
+@use "../abstract" as *;
+@use "_fonts" as *;
+@use "_colors" as *;
+@use "sass:math";
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+	box-sizing: border-box;
+	// overflow-x: hidden;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+// ::-webkit-scrollbar {
+// 	display: none;
+// }
+
+body {
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	font-size: rem($baseFontSize);
+	// @include adaptive-font(16, 16)
+	// line-height: rem(16);
+	line-height: math.div(16, 16);
+	color: $clr-black;
+	margin: 0;
+	background-color: $grey-line;
+}
+
+body.scroll-lock {
+	overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+p {
+	margin: 0;
+}
+
+button,
+fieldset,
+input,
+legend,
+link,
+textarea {
+	appearance: none;
+	outline: none;
+
+	&:focus {
+		outline: 3px solid $clr-black;
+	}
+}
+
+button {
+	background-color: $clr-white;
+	padding: 0;
+	border-width: 0;
+	font-family: inherit;
+	outline: none;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: 3px solid $clr-black;
+		outline-offset: 2px;
+	}
+
+	&:active {
+		outline: 3px solid $clr-black;
+		outline-offset: 2px;
+	}
+}
+
+h1 {
+	margin: 0;
+}
+
+input {
+	padding: 0;
+}
+
+textarea {
+	padding: rem(13) rem(16);
+}
+
+select {
+	appearance: none;
+	// background-color: olive;
+	// background-color: $grey-line;
+	// outline: none;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+select:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+	// outline: 1px solid $primary;
+	outline: none;
+	border-color: $primary;
+}
+
+input,
+textarea {
+	border: 1px solid $grey-line;
+	background-color: white;
+	border-radius: 6px;
+}
+
+hr {
+	margin: 0;
+}
+
+s::before,
+s::after {
+	clip-path: inset(100%);
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+s::before {
+	content: " [start of stricken text] ";
+}
+
+s::after {
+	content: " [end of stricken text] ";
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+[class*="__container"] {
+	max-width: em($maxWidthContainer);
+	margin: 0 auto;
+	padding: 0 10px;
+	// @include adaptive-value("padding-left", 20, 10, 1, em);
+	// @include adaptive-value-px("padding-left", 20, 10, 1);
+	// @include adaptive-value("padding-right", 20, 10, 1, rem);
+	// @include adaptive-value-px("padding-right", 20, 10, 1);
+	// padding: 0 rem(10);
+	@media screen and (min-width: em(390)) {
+		padding: 0 20px;
+	}
+}
