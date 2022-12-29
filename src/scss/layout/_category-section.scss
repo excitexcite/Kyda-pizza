@@ -155,11 +155,19 @@
 	@include mqm(500) {
 		background-color: transparent;
 	}
+
+	@include mqm(800) {
+		padding-inline: 0;
+	}
 }
 
 .food__sale {
 	@include mqm(500) {
 		padding-block: 0;
+	}
+
+	@include mqm(800) {
+		padding-inline: 0;
 	}
 }
 
@@ -172,7 +180,7 @@
 	@include mqm(500) {
 		display: flex;
 		order: -1;
-		align-self: flex-end;
+		// align-self: flex-end;
 	}
 
 	@include mqm(900) {

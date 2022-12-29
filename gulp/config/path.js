@@ -1,8 +1,14 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./dist`
-const srcFolder = `./src`
+const buildFolder = `./dist`;
+const srcFolder = `./src`;
+const cleanNoFonts = [
+	'dist/css/**',
+	'dist/img/**',
+	'dist/js/**',
+	'dist/*.html',
+];
 
 export const path = {
 	build: {
@@ -29,9 +35,11 @@ export const path = {
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,webp,svg}`,
 		files: `${srcFolder}/files/**/*.*`,
 	},
+
+	cleanNoFonts: cleanNoFonts,
 	clean: buildFolder,
 	buildFolder: buildFolder,
 	srcFolder: srcFolder,
 	rootFolder: rootFolder,
-	ftp: `test`
-}
+	ftp: `test`,
+};

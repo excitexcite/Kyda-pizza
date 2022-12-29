@@ -168,7 +168,7 @@
 
 .login-dropdown {
 	&:after {
-		top: calc(100% - 0.375rem);
+		top: calc(100% - rem(4));
 	}
 }
 

@@ -17,6 +17,7 @@ import { html } from './gulp/tasks/html.js';
 import { images } from './gulp/tasks/images.js';
 import { js } from './gulp/tasks/javascript.js';
 import { reset } from './gulp/tasks/reset.js';
+import { resetNoFonts } from './gulp/tasks/reset.js';
 import { scss } from './gulp/tasks/scss.js';
 import { server } from './gulp/tasks/server.js';
 import { svgSpriteCreate } from './gulp/tasks/svgSprite.js';
@@ -33,6 +34,7 @@ function watcher() {
 
 export { svgSpriteCreate };
 export { dev };
+export { devNoFonts };
 export { build };
 export { deployZip };
 export { deployFTP };
@@ -41,12 +43,20 @@ export { fonts };
 // processing fonts
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-// const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSpriteCreate));
 const mainTasks = gulp.series(
+	fonts,
+	gulp.parallel(copy, html, scss, js, images, svgSpriteCreate)
+);
+const mainTasksNoFonts = gulp.series(
 	gulp.parallel(copy, html, scss, js, images, svgSpriteCreate)
 );
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const devNoFonts = gulp.series(
+	resetNoFonts,
+	mainTasksNoFonts,
+	gulp.parallel(watcher, server)
+);
 const build = gulp.series(reset, mainTasks);
 const deployZip = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);

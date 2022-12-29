@@ -79,6 +79,7 @@
 .product__options-container {
 	display: flex;
 	flex-flow: column;
+	height: 100%;
 }
 
 .product__image-container {
@@ -317,26 +318,7 @@
 }
 
 .product__summary {
-	display: flex;
-	justify-content: space-between;
-	padding: rem(12) rem(20);
 	margin-top: auto;
-	border-top: solid 1px $grey-line;
-
-	@include mqm(1100) {
-		border: none;
-	}
-}
-
-.product__summary-numbers {
-	display: flex;
-	flex-flow: column;
-	align-self: center;
-
-	@include mqm(900) {
-		flex-flow: row;
-		align-items: center;
-	}
 }
 
 .product__sum {

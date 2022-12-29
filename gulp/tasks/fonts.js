@@ -47,11 +47,8 @@ export const fontsStyle = () => {
 				fs.writeFile(fontsFile, '', cb);
 				let newFileOnly;
 				for (let i = 0; i < fontsFiles.length; i++) {
-					// for (let file in fontsFiles) {
-					//
 					let fontFileName = fontsFiles[i].split('.')[0];
-					console.log(`fontFileName = ${fontFileName}`);
-					// let fontFileName = file.split('.')[0];
+					// console.log(`fontFileName = ${fontFileName}`);
 					if (newFileOnly !== fontFileName) {
 						let fontName = fontFileName.split('-')[0]
 							? fontFileName.split('-')[0]
@@ -59,8 +56,8 @@ export const fontsStyle = () => {
 						let fontWeight = fontFileName.split('-')[1]
 							? fontFileName.split('-')[1]
 							: fontFileName;
-						console.log(`fontName = ${fontName}`);
-						console.log(`fontWeight = ${fontWeight}`);
+						// console.log(`fontName = ${fontName}`);
+						// console.log(`fontWeight = ${fontWeight}`);
 						switch (fontWeight.toLocaleLowerCase()) {
 							case 'thin':
 								fontWeight = 100;
@@ -92,7 +89,7 @@ export const fontsStyle = () => {
 						}
 						fs.appendFile(
 							fontsFile,
-							`@font-face{\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../../fonts/${fontFileName}.woff2") format("woff2"), url("../../fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,
+							`@font-face{\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,
 							cb
 						);
 						newFileOnly = fontFileName;

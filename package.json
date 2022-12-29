@@ -7,6 +7,7 @@
 	"scripts": {
 		"fonts": "gulp fonts",
 		"dev": "gulp",
+		"devNoFonts": "gulp devNoFonts",
 		"build": "gulp build --build",
 		"zip": "gulp deployZip --build",
 		"deploy": "gulp deployFTP --build",
