@@ -53,7 +53,6 @@
 	row-gap: 10px;
 	align-items: center;
 	justify-content: space-between;
-	// min-height: 32px;
 }
 
 .order__item-controls {
@@ -92,7 +91,6 @@
 
 	&:active {
 		background-color: $clr-black;
-		// border-color: $clr-black;
 		outline: 3px solid $primary;
 	}
 }
@@ -140,16 +138,11 @@
 }
 
 .order-add {
-	// padding: rem(12);
 	padding: 12px;
-	// max-width: rem(270);
 	max-width: 270px;
 	min-height: rem(85);
-	// width: 100%;
 
 	@include mqm(400) {
-		// max-width: 300px;
-		// width: 300px;
 		max-width: rem(300);
 	}
 
@@ -216,7 +209,9 @@
 
 .order-add__button {
 	margin-top: auto;
+	min-width: rem(70);
 	padding: rem(7) rem(16);
+	font-weight: 600;
 
 	@include mqm(600) {
 		flex-basis: 100%;

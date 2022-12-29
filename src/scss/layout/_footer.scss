@@ -53,12 +53,16 @@
 }
 
 .footer__copy {
-	@include adaptive-value("line-height", 18, 22, 1);
+	line-height: math.div(18, 16);
 	@include adaptive-font(14, 16);
 	display: none;
 
 	@include mqm(600) {
 		display: flex;
+	}
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
 	}
 }
 
@@ -92,7 +96,11 @@
 .footer__title {
 	font-weight: 600;
 	@include adaptive-font(14, 20);
-	@include adaptive-value("line-height", 28, 18, 1);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(28, 16);
+	}
 }
 
 .footer__list {
@@ -102,14 +110,22 @@
 }
 
 .footer__link {
-	@include adaptive-value("line-height", 22, 18, 1);
-	@include adaptive-font(14, 18);
 	padding: 6px 6px 6px 0;
+	@include adaptive-font(14, 18);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
+	}
 }
 
 .footer__socials-link {
-	@include adaptive-value("line-height", 18, 22, 1);
+	line-height: math.div(18, 16);
 	@include adaptive-font(14, 16);
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
+	}
 }
 
 .footer__separator {

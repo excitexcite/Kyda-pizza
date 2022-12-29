@@ -4,7 +4,6 @@
 
 .button {
 	@include adaptive-font(14, 16);
-	// @include adaptive-value("line-height", 22, 18, 1);
 	line-height: math.div(22, 16);
 	border-radius: 6px;
 
@@ -32,7 +31,7 @@
 		color: $primary;
 		background-color: $clr-black;
 		outline: 3px solid $primary;
-		outline-offset: 2px;
+		outline-offset: 3px;
 	}
 }
 
@@ -41,14 +40,12 @@
 	background-color: $clr-white;
 	border: solid 1px $primary;
 	transition: color $buttonTransition ease-in-out 0ms,
-		background-color $buttonTransition ease-in-out 0ms,
 		border-color $buttonTransition ease-in-out 0ms;
 
 	@media (hover: hover) {
 		&:hover {
 			color: $clr-black;
 			border-color: $clr-black;
-			background-color: $primary-light;
 		}
 	}
 }
@@ -73,39 +70,6 @@
 		background-color: $primary;
 		border-color: $primary;
 	}
-}
-
-.icon-close {
-	// fill: $grey-text;
-	// fill: red;
-	width: 32px;
-	height: 32px;
-
-	@media (hover: hover) {
-		&:hover {
-			cursor: pointer;
-		}
-	}
-}
-
-.icon-arrow {
-	// fill: $grey-text;
-	// fill: red;
-	width: 32px;
-	height: 32px;
-}
-
-.arrow-right {
-	transform: rotate(-90deg);
-}
-
-.arrow-left {
-	transform: rotate(90deg);
-}
-
-.icon-send {
-	width: rem(16);
-	height: rem(16);
 }
 
 .button-slider {
@@ -155,21 +119,6 @@
 		&:active {
 			background-color: initial;
 			fill: $primary;
-		}
-	}
-}
-
-.button-close-menu {
-	width: 24px;
-	height: 24px;
-	background-image: url("../img/icons.svg#cross-square");
-	background-size: 24px 24px;
-	background-repeat: no-repeat;
-	background-position: center;
-
-	@media (hover: hover) {
-		&:hover {
-			cursor: pointer;
 		}
 	}
 }

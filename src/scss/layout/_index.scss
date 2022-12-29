@@ -4,6 +4,7 @@
 @forward "order";
 @forward "filter";
 @forward "product-details";
+@forward "about";
 @forward "category-section";
 @forward "account";
 @forward "login";
@@ -15,95 +16,4 @@
 
 .page {
 	position: relative;
-}
-
-.delivery {
-	background-color: $grey-line;
-}
-
-.page__delivery {
-	@include adaptive-value("margin-top", 60, 30, 1, rem);
-	@include adaptive-value("margin-bottom", 60, 30, 1, rem);
-	margin-left: auto;
-	margin-right: auto;
-	@include mqm(850) {
-		max-width: rem(850);
-	}
-}
-
-.delivety__title {
-	font-weight: 600;
-	@include adaptive-font(18, 32);
-	line-height: math.div(22, 16);
-	@include adaptive-value("margin-bottom", 16, 12, 1, rem);
-}
-
-.delivery__text {
-	@include adaptive-value("margin-bottom", 16, 12, 1, rem);
-	@include adaptive-font(14, 16);
-	line-height: math.div(22, 16);
-}
-
-.delivery__text-subheader {
-	@include adaptive-font(14, 16);
-	font-weight: 600;
-}
-
-.delivery__read-more {
-	font-weight: 600;
-	@include adaptive-font(14, 16);
-	line-height: math.div(20, 16);
-	color: $primary;
-	&:hover {
-		cursor: pointer;
-	}
-}
-
-.limiter {
-	max-height: rem(170);
-	overflow: hidden;
-	position: relative;
-	@include mqm(600) {
-		max-height: rem(300);
-	}
-	@include mqm(600) {
-		max-height: rem(400);
-	}
-}
-
-.overflow-hidder {
-	position: absolute;
-	bottom: 0;
-	background: linear-gradient(
-		to bottom,
-		rgba(240, 240, 240, 0) 0%,
-		rgba(240, 240, 240, 1) 90%
-	);
-	max-width: rem($maxWidthContainer);
-	width: 100%;
-	height: 250px;
-	opacity: 1;
-	transition: 300ms;
-}
-
-.read-more-checker {
-	opacity: 0;
-	position: absolute;
-}
-
-.read-more-checker:checked ~ .limiter {
-	max-height: none;
-}
-
-.read-more-checker:checked ~ .limiter .overflow-hidder {
-	opacity: 0;
-	transition: 300ms;
-}
-
-.read-more-checker ~ .read-more-button::after {
-	content: "Подробнее";
-}
-
-.read-more-checker:checked ~ .read-more-button::after {
-	content: "Свернуть";
 }

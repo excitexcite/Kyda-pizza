@@ -1,144 +1,198 @@
-<section class="sushi page__sushi food">
+<section class="sushi page__sushi food" id="sushi-section">
 	<div class="food__heading">
 		<h2 class="food__header">Суши</h2>
-		<button class="button button-outlined-primary food__filter">Фильтры</button>
+		<button
+			class="button button-outlined-primary food__filter"
+			aria-controls="food-filter"
+			aria-hidden="false"
+		>
+			Фильтры
+		</button>
 	</div>
+
 	<div class="food__cards">
-		<div class="food__card">
-			<img class="food__image" src="@img/sushi1.jpg" alt="Суши">
-			<div class="food__card-text">
-				<a class="food__link link-primary" href="">
-					<h3 class="food__title">Филадельфия кранч</h3>
-				</a>
-				<p class="food__description">Семга, рис, сыр креметто, соус унаги,
-					креветка, авокадо, чипсы...</p>
-				<div class="food__price-container">
-					<p class="food__price">395 ₽</p>
-					<!-- <p class="food__sale">от 699 ₽</p> -->
-					<button class="button button-filled food__select">Выбрать</button>
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="@img/sushi1.jpg" alt="" />
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top">
+					<h3 class="card__title-large food__title">Филадельфия кранч</h3>
+					<p class="card__text-medium food__description">
+						Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чипсы...
+					</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price-sale food__sale"><s>от 650 ₽</s></p>
+						<p class="card__price food__price">от 420 ₽</p>
+					</div>
+					<button class="button button-filled card__button-add food__select">
+						Выбрать
+					</button>
 				</div>
 				<div class="card__label food__card-label">New</div>
 			</div>
 		</div>
 
-		<div class="food__card">
-			<img class="food__image" src="@img/sushi2.jpg" alt="Суши">
-			<div class="food__card-text">
-				<a class="food__link link-primary" href="">
-					<h3 class="food__title">Филадельфия крем-брюле</h3>
-				</a>
-				<p class="food__description">Сливочный сыр, семга татаки с тростниковым
-					сахаром, соус унаги</p>
-				<div class="food__price-container">
-					<p class="food__price">425 ₽</p>
-					<!-- <p class="food__sale">от 699 ₽</p> -->
-					<button class="button button-filled food__select">Выбрать</button>
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="@img/sushi3.jpg" alt="" />
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top">
+					<h3 class="card__title-large food__title">Тигр мама</h3>
+					<p class="card__text-medium food__description">
+						Тигровая креветка, огурец, авокадо, соус Айоли, рис, икра...
+					</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price food__price">от 489 ₽</p>
+					</div>
+					<button class="button button-filled card__button-add food__select">
+						Выбрать
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="@img/sushi2.jpg" alt="" />
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top">
+					<h3 class="card__title-large food__title">Филадельфия крем-брюле</h3>
+					<p class="card__text-medium food__description">
+						Сливочный сыр, семга татаки с тростниковым сахаром, соус унаги
+					</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price-sale food__sale"><s>от 799 ₽</s></p>
+						<p class="card__price food__price">от 431 ₽</p>
+					</div>
+					<button class="button button-filled card__button-add food__select">
+						Выбрать
+					</button>
+				</div>
+				<div class="card__label food__card-label">Хит</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="@img/sushi4.jpg" alt="" />
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top">
+					<h3 class="card__title-large food__title">Дракон</h3>
+					<p class="card__text-medium food__description">
+						Угорь, рис, огурец, сыр креметто, кунжут, соус унаги
+					</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price food__price">от 489 ₽</p>
+					</div>
+					<button class="button button-filled card__button-add food__select">
+						Выбрать
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="@img/sushi3.jpg" alt="" />
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top">
+					<h3 class="card__title-large food__title">Тигр мама</h3>
+					<p class="card__text-medium food__description">
+						Тигровая креветка, огурец, авокадо, соус Айоли, рис, икра...
+					</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price food__price">от 489 ₽</p>
+					</div>
+					<button class="button button-filled card__button-add food__select">
+						Выбрать
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="@img/sushi2.jpg" alt="" />
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top">
+					<h3 class="card__title-large food__title">Филадельфия крем-брюле</h3>
+					<p class="card__text-medium food__description">
+						Сливочный сыр, семга татаки с тростниковым сахаром, соус унаги
+					</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price-sale food__sale"><s>от 799 ₽</s></p>
+						<p class="card__price food__price">от 431 ₽</p>
+					</div>
+					<button class="button button-filled card__button-add food__select">
+						Выбрать
+					</button>
+				</div>
+				<div class="card__label food__card-label">Хит</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="@img/sushi4.jpg" alt="" />
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top">
+					<h3 class="card__title-large food__title">Дракон</h3>
+					<p class="card__text-medium food__description">
+						Угорь, рис, огурец, сыр креметто, кунжут, соус унаги
+					</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price food__price">от 489 ₽</p>
+					</div>
+					<button class="button button-filled card__button-add food__select">
+						Выбрать
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card food__card">
+			<div class="card__image-container food__image-container">
+				<img class="card__image food__image" src="@img/sushi1.jpg" alt="" />
+			</div>
+			<div class="card__main-content food__card-content">
+				<div class="card__content-top">
+					<h3 class="card__title-large food__title">Филадельфия кранч</h3>
+					<p class="card__text-medium food__description">
+						Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чипсы...
+					</p>
+				</div>
+				<div class="card__content-bottom food__card-content-bottom">
+					<div class="card__price-container food__price-container">
+						<p class="card__price-sale food__sale"><s>от 650 ₽</s></p>
+						<p class="card__price food__price">от 420 ₽</p>
+					</div>
+					<button class="button button-filled card__button-add food__select">
+						Выбрать
+					</button>
 				</div>
 				<div class="card__label food__card-label">New</div>
 			</div>
 		</div>
-
-		<div class="food__card">
-			<img class="food__image" src="@img/sushi3.jpg" alt="Суши">
-			<div class="food__card-text">
-				<a class="food__link link-primary" href="">
-					<h3 class="food__title">Тигр мама</h3>
-				</a>
-				<p class="food__description">Тигровая креветка, огурец, авокадо, соус
-					Айоли, рис, икра...</p>
-				<div class="food__price-container">
-					<p class="food__price">525 ₽</p>
-					<!-- <p class="food__sale">от 699 ₽</p> -->
-					<button class="button button-filled food__select">Выбрать</button>
-				</div>
-				<div class="card__label food__card-label">New</div>
-			</div>
-		</div>
-
-		<div class="food__card">
-			<img class="food__image" src="@img/sushi4.jpg" alt="Суши">
-			<div class="food__card-text">
-				<a class="food__link link-primary" href="">
-					<h3 class="food__title">Дракон</h3>
-				</a>
-				<p class="food__description">Угорь, рис, огурец, сыр креметто, кунжут,
-					соус унаги</p>
-				<div class="food__price-container">
-					<p class="food__price">465 ₽</p>
-					<!-- <p class="food__sale">от 699 ₽</p> -->
-					<button class="button button-filled food__select">Выбрать</button>
-				</div>
-				<div class="card__label food__card-label">New</div>
-			</div>
-		</div>
-
-		<div class="food__card">
-			<img class="food__image" src="@img/sushi1.jpg" alt="Суши">
-			<div class="food__card-text">
-				<a class="food__link link-primary" href="">
-					<h3 class="food__title">Филадельфия с лососем</h3>
-				</a>
-				<p class="food__description">Семга, королевский авокадо, сыр, обжаренный
-					кунжут и всего 80...</p>
-				<div class="food__price-container">
-					<p class="food__price">485 ₽</p>
-					<!-- <p class="food__sale">от 699 ₽</p> -->
-					<button class="button button-filled food__select">Выбрать</button>
-				</div>
-				<div class="card__label food__card-label">New</div>
-			</div>
-		</div>
-
-		<div class="food__card">
-			<img class="food__image" src="@img/sushi2.jpg" alt="Суши">
-			<div class="food__card-text">
-				<a class="food__link link-primary" href="">
-					<h3 class="food__title">Филадельфия крем-брюле</h3>
-				</a>
-				<p class="food__description">Сливочный сыр, семга татаки с тростниковым
-					сахаром, соус унаги</p>
-				<div class="food__price-container">
-					<p class="food__price">425 ₽</p>
-					<!-- <p class="food__sale">от 699 ₽</p> -->
-					<button class="button button-filled food__select">Выбрать</button>
-				</div>
-				<div class="card__label food__card-label">New</div>
-			</div>
-		</div>
-
-		<div class="food__card">
-			<img class="food__image" src="@img/sushi3.jpg" alt="Суши">
-			<div class="food__card-text">
-				<a class="food__link link-primary" href="">
-					<h3 class="food__title">Тигр мама</h3>
-				</a>
-				<p class="food__description">Тигровая креветка, огурец, авокадо, соус
-					Айоли, рис, икра...</p>
-				<div class="food__price-container">
-					<p class="food__price">525 ₽</p>
-					<!-- <p class="food__sale">от 699 ₽</p> -->
-					<button class="button button-filled food__select">Выбрать</button>
-				</div>
-				<div class="card__label food__card-label">New</div>
-			</div>
-		</div>
-
-		<div class="food__card">
-			<img class="food__image" src="@img/sushi4.jpg" alt="Суши">
-			<div class="food__card-text">
-				<a class="food__link link-primary" href="">
-					<h3 class="food__title">Дракон</h3>
-				</a>
-				<p class="food__description">Угорь, рис, огурец, сыр креметто, кунжут,
-					соус унаги</p>
-				<div class="food__price-container">
-					<p class="food__price">465 ₽</p>
-					<!-- <p class="food__sale">от 699 ₽</p> -->
-					<button class="button button-filled food__select">Выбрать</button>
-				</div>
-				<div class="card__label food__card-label">New</div>
-			</div>
-		</div>
-
 	</div>
 </section>

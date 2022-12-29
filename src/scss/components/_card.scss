@@ -10,13 +10,16 @@
 .card__title-small {
 	font-weight: 600;
 	@include adaptive-font(14, 16);
-	@include adaptive-value("line-height", 20, 18, 1);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(20, 16);
+	}
 }
 
 .card__title-medium {
 	font-weight: 600;
 	@include adaptive-font(14, 18);
-	// @include adaptive-value("line-height", 24, 18, 1);
 	line-height: math.div(18, 16);
 
 	@include mqm(768) {
@@ -27,7 +30,11 @@
 .card__title-large {
 	font-weight: 600;
 	@include adaptive-font(14, 20);
-	@include adaptive-value("line-height", 28, 18, 1);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(28, 16);
+	}
 }
 
 /// card-menu mobile f12 lh16 pc f14 lh18
@@ -36,12 +43,20 @@
 /// card mobile f12 lh16 pc f16 lh22
 .card__text-small {
 	@include adaptive-font(12, 14);
-	@include adaptive-value("line-height", 18, 16, 1);
+	line-height: math.div(16, 16);
+
+	@include mqm(768) {
+		line-height: math.div(18, 16);
+	}
 }
 
 .card__text-medium {
 	@include adaptive-font(12, 16);
-	@include adaptive-value("line-height", 22, 16, 1);
+	line-height: math.div(16, 16);
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
+	}
 }
 
 /// main card mobile f lh pc f16 lh22
@@ -56,16 +71,9 @@
 	line-height: math.div(28, 16);
 }
 
-/// select-foodv f18 lh22 pc f20 lh28
-/// cart-menu f18 lh22 pc f20 lh28
-/// cart f18 lh22 pc f20 lh28
-.summary-sum {
-}
-
 .card {
 	display: flex;
 	height: auto;
-	// width: auto;
 	column-gap: 12px;
 	row-gap: 16px;
 	border-radius: 12px;
@@ -93,11 +101,18 @@
 .card__content-bottom {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	align-items: center;
 	margin-top: auto;
 	gap: rem(10);
 	width: 100%;
+
+	@include mqm(340) {
+		justify-content: end;
+	}
+
+	@include mqm(460) {
+		justify-content: space-between;
+	}
 }
 
 .card__price-container {
@@ -123,7 +138,6 @@
 	padding: rem(7) rem(16);
 	@include adaptive-font(14, 18);
 	color: $grey-text;
-	// text-decoration: line-through;
 }
 
 .card__label {

@@ -8,7 +8,7 @@ global.app = {
 	path: path,
 	gulp: gulp,
 	plugins: plugins,
-}
+};
 
 import { copy } from './gulp/tasks/copy.js';
 import { fontsStyle, otfToTtf, ttfToWoff } from './gulp/tasks/fonts.js';
@@ -42,12 +42,13 @@ export { fonts };
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSpriteCreate));
-const mainTasks = gulp.series(gulp.parallel(copy, html, scss, js, images, svgSpriteCreate));
+const mainTasks = gulp.series(
+	gulp.parallel(copy, html, scss, js, images, svgSpriteCreate)
+);
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZip = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
-
 
 gulp.task('default', dev);

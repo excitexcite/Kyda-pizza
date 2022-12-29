@@ -84,7 +84,7 @@
 
 	@include mqm(768) {
 		display: flex;
-		flex-basis: initial;
+		flex-basis: auto;
 		margin-bottom: 0;
 	}
 }
@@ -133,9 +133,11 @@
 
 	& span {
 		font-size: 0;
+		line-height: math.div(16, 16);
+
 		@include mqm(768) {
 			font-size: rem(16);
-			@include adaptive-value("line-height", 22, 16, 1);
+			line-height: math.div(22, 16);
 			color: $clr-white;
 		}
 	}

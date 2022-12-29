@@ -3,40 +3,28 @@
 @use "_colors" as *;
 @use "sass:math";
 
-/**
- * Set up a decent box model on the root element
- */
 html {
 	box-sizing: border-box;
-	// overflow-x: hidden;
+	height: 100%;
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--scroll-padding, rem(106));
 }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *,
 *::before,
 *::after {
 	box-sizing: inherit;
 }
 
-// ::-webkit-scrollbar {
-// 	display: none;
-// }
-
 body {
 	font-family: Inter, sans-serif;
 	font-weight: 400;
 	font-size: rem($baseFontSize);
-	// @include adaptive-font(16, 16)
-	// line-height: rem(16);
 	line-height: math.div(16, 16);
 	color: $clr-black;
 	margin: 0;
-	background-color: $grey-line;
+	background-color: $clr-background;
+	height: 100%;
 }
 
 body.scroll-lock {
@@ -67,7 +55,7 @@ p {
 	margin: 0;
 }
 
-button,
+select,
 fieldset,
 input,
 legend,
@@ -77,7 +65,11 @@ textarea {
 	outline: none;
 
 	&:focus {
-		outline: 3px solid $clr-black;
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
 	}
 }
 
@@ -94,12 +86,12 @@ button {
 
 	&:focus-visible {
 		outline: 3px solid $clr-black;
-		outline-offset: 2px;
+		outline-offset: 3px;
 	}
 
 	&:active {
 		outline: 3px solid $clr-black;
-		outline-offset: 2px;
+		outline-offset: 3px;
 	}
 }
 
@@ -115,25 +107,10 @@ textarea {
 	padding: rem(13) rem(16);
 }
 
-select {
-	appearance: none;
-	// background-color: olive;
-	// background-color: $grey-line;
-	// outline: none;
-}
-
 fieldset {
 	border: 0;
 	padding: 0;
 	margin: 0;
-}
-
-select:focus-visible,
-textarea:focus-visible,
-input:focus-visible {
-	// outline: 1px solid $primary;
-	outline: none;
-	border-color: $primary;
 }
 
 input,
@@ -141,6 +118,13 @@ textarea {
 	border: 1px solid $grey-line;
 	background-color: white;
 	border-radius: 6px;
+}
+
+select:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+	outline: none;
+	border-color: $primary;
 }
 
 hr {
@@ -167,26 +151,24 @@ s::after {
 }
 
 .wrapper {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+	overflow-x: hidden;
 	min-height: 100%;
-	position: relative;
+	/// need for position:sticky in header or remove overflow
+	/// height: 100%;
 }
 
 .page {
-	flex: 1 1 auto;
+	flex: 1 0 auto;
 }
 
 [class*="__container"] {
 	max-width: em($maxWidthContainer);
 	margin: 0 auto;
 	padding: 0 10px;
-	// @include adaptive-value("padding-left", 20, 10, 1, em);
-	// @include adaptive-value-px("padding-left", 20, 10, 1);
-	// @include adaptive-value("padding-right", 20, 10, 1, rem);
-	// @include adaptive-value-px("padding-right", 20, 10, 1);
-	// padding: 0 rem(10);
+
 	@media screen and (min-width: em(390)) {
 		padding: 0 20px;
 	}

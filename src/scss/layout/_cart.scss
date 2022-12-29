@@ -72,10 +72,6 @@
 	font-weight: 600;
 	@include adaptive-font(18, 32);
 	line-height: math.div(22, 16);
-
-	@include mqm(768) {
-		line-height: math.div(48, 16);
-	}
 }
 
 .cart-menu__order-item-title {
@@ -391,7 +387,11 @@
 .add-food__title {
 	font-weight: 600;
 	@include adaptive-font(14, 18);
-	@include adaptive-value("line-height", 24, 18, 1);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(24, 16);
+	}
 }
 
 .add-food__weight {
@@ -423,15 +423,12 @@
 
 .cart__summary {
 	padding-block: 20px;
-	border-top: 1px solid $grey-line;
+	border-top: none;
 	background-color: $clr-white;
 
 	@include mqm(768) {
 		background-color: transparent;
 	}
-}
-
-.cart__order-form {
 }
 
 .order-form {
@@ -444,13 +441,8 @@
 	display: flex;
 	flex-flow: column;
 	padding-bottom: rem(20);
-	// border-bottom: 1px solid $grey-line;
-	border-bottom: 1px solid $clr-black;
+	border-bottom: 1px solid $grey-line;
 	gap: rem(16);
-
-	@include mqm(768) {
-		// gap: 0;
-	}
 }
 
 .order-form__radio-list {
@@ -472,9 +464,6 @@
 	min-height: rem(18);
 }
 
-.about {
-}
-
 .order-form__header {
 	@include adaptive-font(18, 24);
 	line-height: math.div(18, 16);
@@ -482,12 +471,6 @@
 	@include mqm(768) {
 		line-height: math.div(32, 16);
 	}
-}
-
-.order-form__fieldset {
-}
-
-.order-form__legend {
 }
 
 .order-form__details-list {
@@ -514,9 +497,6 @@
 	@include mqm(768) {
 		line-height: math.div(18, 16);
 	}
-}
-
-.delivery {
 }
 
 .delivery__heading {
@@ -633,12 +613,9 @@
 }
 
 .delivery__address-list-item {
-	// display: grid;
 	display: inline-flex;
 	flex-flow: column;
 	gap: rem(8);
-	// width: 100%;
-	// flex-basis: 50%;
 }
 
 .delivery__restaraunt-label {
@@ -659,16 +636,10 @@
 
 .delivery__select-date-time {
 	display: none;
-	// display: grid;
-	// grid-template-columns: repeat(2, 1fr);
 	grid-template-columns: repeat(2, 1fr);
-	// grid-template-columns: repeat(2, minmax(1fr, rem(160)));
-	// grid-template-columns: minmax(1fr, rem(160)) minmax(1fr, rem(160));
-
 	gap: rem(16);
 
 	@include mqm(600) {
-		// grid-template-columns: repeat(2, rem(160));
 		grid-template-columns: repeat(2, rem(160));
 	}
 }
@@ -692,25 +663,11 @@
 }
 
 .delivery__select-time {
-	// width: fit-content;
 	width: 100%;
 }
 
-.delivery__select-arrow {
-	// right: rem(16);
-	// padding-right: rem(16);
-	// width: rem(16);
-	// background-position: right rem(16);
-}
-
 .delivery__time {
-	// display: flex;
-	// flex-flow: column;
 	margin-top: rem(16);
-
-	// 	@include mqm(768) {
-	// 	flex-flow: column;
-	// 	}
 }
 
 .delivery__date-time-radio {
@@ -726,9 +683,6 @@
 	flex-flow: column;
 	column-gap: rem(24);
 	row-gap: rem(16);
-}
-
-.delevery__time-list-item {
 }
 
 .delivery__option-label {
@@ -751,9 +705,6 @@
 	}
 }
 
-.payment {
-}
-
 .payment__list {
 	display: flex;
 	flex-flow: column;
@@ -761,19 +712,11 @@
 	row-gap: rem(16);
 }
 
-.payment__list-item {
-}
-.change-cash {
-}
-
 .change-cash__list {
 	display: flex;
 	flex-flow: column;
 	column-gap: rem(24);
 	row-gap: rem(16);
-}
-
-.change-cash__list-item {
 }
 
 .delivery__change-wrapper {
@@ -789,9 +732,6 @@
 	display: block;
 }
 
-.comments {
-}
-
 .comments__textarea {
 	width: 100%;
 	min-height: rem(140);
@@ -801,7 +741,4 @@
 	@include mqm(768) {
 		min-height: rem(200);
 	}
-	// &::placeholder {
-	// 	padding-top: rem(13);
-	// }
 }

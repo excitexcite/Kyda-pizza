@@ -6,6 +6,10 @@
 }
 
 @function rem($pxValue, $base-value: $baseFontSize) {
+	@if getUnit($pxValue) == "rem" {
+		@debug #{$pxValue};
+		@return $pxValue;
+	}
 	$value: math.div(stripUnits($pxValue), stripUnits($base-value)) * 1rem;
 	@if ($value == 0rem) {
 		$value: 0;

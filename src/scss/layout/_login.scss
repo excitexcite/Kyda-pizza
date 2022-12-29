@@ -22,7 +22,7 @@
 	top: 20px;
 	right: 20px;
 	background-color: transparent;
-	fill: $grey-line;
+	fill: $grey-text;
 	z-index: 10;
 	transition: fill $buttonTransition ease-in-out;
 
@@ -78,15 +78,23 @@
 	margin-bottom: rem(16);
 	font-weight: 600;
 	@include adaptive-font(28, 32);
-	@include adaptive-value("line-height", 40, 32, 1);
+	line-height: math.div(32, 16);
 	text-align: center;
+
+	@include mqm(768) {
+		line-height: math.div(40, 16);
+	}
 }
 
 .login-menu__subheading {
 	@include adaptive-font(14, 16);
-	@include adaptive-value("line-height", 22, 18, 1);
+	line-height: math.div(18, 16);
 	margin-bottom: rem(20);
 	text-align: center;
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
+	}
 }
 
 .login-menu__form {
@@ -108,8 +116,12 @@
 .login-menu__phone-label {
 	color: $grey-text;
 	@include adaptive-font(12, 14);
-	@include adaptive-value("line-height", 18, 16, 1);
+	line-height: math.div(16, 16);
 	margin-bottom: rem(8);
+
+	@include mqm(768) {
+		line-height: math.div(18, 16);
+	}
 }
 
 .login-menu__phone {
@@ -119,7 +131,13 @@
 	&::placeholder {
 		color: $grey-text;
 		@include adaptive-font(14, 16);
-		@include adaptive-value("line-height", 22, 18, 1);
+		line-height: math.div(18, 16);
+	}
+
+	@include mqm(768) {
+		&::placeholder {
+			line-height: math.div(22, 16);
+		}
 	}
 }
 
@@ -128,7 +146,11 @@
 	color: $clr-white;
 	background-color: $primary;
 	@include adaptive-font(14, 16);
-	@include adaptive-value("line-height", 22, 18, 1);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
+	}
 }
 
 .login-menu__send-again,
@@ -136,8 +158,12 @@
 	margin-top: rem(12);
 	color: $grey-text;
 	@include adaptive-font(12, 14);
-	@include adaptive-value("line-height", 18, 16, 1);
+	line-height: math.div(16, 16);
 	text-align: center;
+
+	@include mqm(768) {
+		line-height: math.div(18, 16);
+	}
 }
 
 .login-menu__code {
@@ -147,17 +173,21 @@
 
 	&::placeholder {
 		color: $grey-text;
-		@include adaptive-value("line-height", 22, 18, 1);
+		line-height: math.div(18, 16);
 	}
 
 	@include mqm(768) {
 		max-width: rem(48);
+
+		&::placeholder {
+			line-height: math.div(22, 16);
+		}
 	}
 }
 
 .login-menu__send {
 	@include adaptive-font(12, 14);
-	@include adaptive-value("line-height", 18, 16, 1);
+	line-height: math.div(16, 16);
 
 	&--countdown {
 		color: $grey-text;
@@ -165,5 +195,9 @@
 
 	&--active {
 		color: $grey-text;
+	}
+
+	@include mqm(768) {
+		line-height: math.div(18, 16);
 	}
 }

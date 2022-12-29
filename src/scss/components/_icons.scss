@@ -1,0 +1,38 @@
+@use "abstract" as *;
+@use "base" as *;
+@use "sass:math";
+
+.icon-close {
+	width: 32px;
+	height: 32px;
+
+	@media (hover: hover) {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.icon-arrow {
+	width: 32px;
+	height: 32px;
+}
+
+.arrow-right {
+	transform: rotate(-90deg);
+}
+
+.arrow-left {
+	transform: rotate(90deg);
+}
+
+.icon-send {
+	width: rem(16);
+	height: rem(16);
+}
+
+.icon-account {
+	width: rem(20);
+	height: rem(20);
+	fill: $primary;
+}

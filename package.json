@@ -41,10 +41,13 @@
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
 		"sass": "latest",
-		"swiper": "^8.4.4",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
 		"webpack": "latest",
 		"webpack-stream": "latest"
+	},
+	"dependencies": {
+		"gh-pages": "^4.0.0",
+		"swiper": "^8.4.5"
 	}
 }

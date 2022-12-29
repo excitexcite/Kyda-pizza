@@ -1,212 +1,312 @@
 <!DOCTYPE html>
 <html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Куда Пицца</title>
+		<link href="css/style.min.css" rel="stylesheet" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Куда Пицца</title>
-	<link href="css/style.min.css" rel="stylesheet">
-</head>
-
-<body>
-	<div class="wrapper">
-		<header class="header">
+	<body>
+		<div class="wrapper">
+			<header class="header">
 	<div class="header__container">
 		<div class="header__top top-header">
-			<!-- <button class="top-header__city">Москва<span
-					class="dropdown-arrow"></span></button> -->
-			<div class="top-header__city select-wrapper">
-				<select class="select-element top-header__select" name="" id="">
+			<div class="header__select-city-wrapper select-wrapper">
+				<select class="select-element header__select-city" name="" id="">
 					<option value="Москва">Москва</option>
 					<option value="Питер">Санкт-Петербург</option>
 					<option value="Екатеринбург">Екатеринбург</option>
 					<option value="Белгород">Белгород</option>
 					<option value="Смоленс">Смоленск</option>
 				</select>
-				<svg class="select-arrow top-header__select-arrow" width="32"
-					height="32" viewBox="0 0 32 32">
+				<svg
+					class="select-arrow header__select-city-arrow"
+					width="32"
+					height="32"
+					viewBox="0 0 32 32"
+				>
 					<title>arrowsvg</title>
 					<path
-						d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
-					</path>
+						d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z"
+					></path>
 				</svg>
-				<!-- <span class="select-custom-arrow top-header__select-arrow"></span>
-				 -->
-				<!-- <div class="select-wrapper">
-
-				</div> -->
 			</div>
-			<a class="top-header__address link-primary" href="#checkAddress">Проверить
-				адрес</a>
-			<p class="top-header__time-text">Среднее время доставки*:
-				<time class="top-header__time">00:24:19</time>
+
+			<a class="header__check-address link-primary" href="#check-address"
+				>Проверить адрес</a
+			>
+			<p class="header__delivery-time-text">
+				Среднее время доставки*:
+				<time class="header__delivery-time">00:24:19</time>
 			</p>
-			<p class="top-header__working-hours">Время работы: с 11:00 до
-				23:00</p>
-			<a class="top-header__login link-primary" href="#">Войти в аккаунт</a>
+			<p class="header__working-hours">Время работы: с 11:00 до 23:00</p>
+			<div class="header__login-wrapper login-dropdown dropdown">
+				<button
+					class="login-dropdown__title dropdown__title"
+					aria-expanded="false"
+					aria-controls="login-dropdown"
+					id="
+					dropdownLoginButton"
+				>
+					<svg class="icon-account" width="32" height="32" viewBox="0 0 32 32">
+						<title>Аккаунт</title>
+						<path
+							d="M16 0c-4.227 0-7.667 3.44-7.667 7.667s3.44 7.667 7.667 7.667c4.227 0 7.667-3.439 7.667-7.667s-3.44-7.667-7.667-7.667zM10.041 7.667c0-3.287 2.673-5.959 5.959-5.959s5.959 2.673 5.959 5.959c0 3.286-2.673 5.959-5.959 5.959s-5.959-2.673-5.959-5.959z"
+						></path>
+						<path
+							d="M9.542 18.667c-3.791 0-6.875 3.166-6.875 7.056v5.458c0 0.452 0.357 0.819 0.798 0.819h25.071c0.44 0 0.798-0.367 0.798-0.819v-5.458c0-3.89-3.085-7.056-6.875-7.056h-12.916zM4.262 25.723c0-2.988 2.369-5.419 5.28-5.419h12.916c2.911 0 5.28 2.431 5.28 5.419v4.639h-23.476v-4.639z"
+						></path>
+					</svg>
+					<span class="header__login-text">Войти в аккаунт</span>
+				</button>
+				<ul class="login-dropdown__list dropdown__menu" id="login-dropdown">
+					<li class="login-dropdown__list-item dropdown__menu-item">
+						<p class="header__login-bonuses">100 бонусов</p>
+					</li>
+					<li class="login-dropdown__list-item dropdown__menu-item">
+						<ul class="login-dropdown__sub-list">
+							<li class="login-dropdown__sub-list-item">
+								<a
+									class="login-dropdown__link dropdown__menu-link link-primary"
+									href=""
+									>История заказов</a
+								>
+							</li>
+							<li class="login-dropdown__sub-list-item dropdown__menu-item">
+								<a
+									class="login-dropdown__link dropdown__menu-link link-primary"
+									href=""
+									>Настройки</a
+								>
+							</li>
+						</ul>
+					</li>
+					<li class="login-dropdown__list-item">
+						<a
+							class="login-dropdown__link dropdown__menu-link link-primary"
+							href=""
+							>Выход из аккаунта</a
+						>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	<hr class="separator">
+	<hr class="separator" />
 
 	<div class="header__container">
 		<a class="logo link-primary logo__link header__logo" href="index.html">
-			<img class="logo__img" src="img/logo.svg" alt="logo">
+			<img class="logo__img" src="img/logo.svg" alt="logo" />
 		</a>
 		<div class="header__menu menu">
-			<button class="menu-icon">
-				<span class="hide-text">Меню</span>
-			</button>
-			<nav class="menu__body">
+			<nav class="menu__body" aria-label="Mobile Navigation">
+				<button
+					class="menu__togle menu-button"
+					aria-controls="mobile-navigation"
+					aria-hidden="false"
+				>
+					<span class="visually-hidden">Меню</span>
+					<span class="menu-button__icon" aria-hidden="true"></span>
+				</button>
 				<ul class="menu__list">
 					<li class="menu__list-item">
 						<a class="menu__link link-primary" href="#">Акции</a>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__link link-primary" href="#">Пицца</a>
+						<a class="menu__link link-primary" href="#pizza-section">Пицца</a>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__link link-primary" href="#">Суши</a>
+						<a class="menu__link link-primary" href="#sushi-section">Суши</a>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__link link-primary" href="#">Напитки</a>
+						<a class="menu__link link-primary" href="#drinks-section"
+							>Напитки</a
+						>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__link link-primary" href="#">Закуски</a>
+						<a class="menu__link link-primary" href="#snacs-section">Закуски</a>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__link link-primary" href="#">Комбо</a>
+						<a class="menu__link link-primary" href="#combo-section">Комбо</a>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__link link-primary" href="#">Десерты</a>
+						<a class="menu__link link-primary" href="#desserts-section"
+							>Десерты</a
+						>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__link link-primary" href="#">Соусы</a>
+						<a class="menu__link link-primary" href="#sauces-section">Соусы</a>
 					</li>
-					<li class="menu__list-item">
-						<a class="menu__link link-primary" href="#">Другое</a>
-						<ul class="sub-menu__list">
-							<li class="sub-menu__list-item">
-								<a class="sub-menu__link link-primary" href="#">Акции</a>
+					<li class="menu__list-item sub-menu dropdown" id="nav-other">
+						<button
+							type="button"
+							class="dropdown__title"
+							aria-expanded="false"
+							aria-controls="other-dropdown"
+						>
+							Другое
+						</button>
+						<ul
+							class="sub-menu__list menu-mobile__list dropdown__menu"
+							id="other-dropdown"
+						>
+							<li class="sub-menu__list-item dropdown__menu-item">
+								<a
+									class="sub-menu__link dropdown__menu-link link-primary"
+									href="#"
+									>Акции</a
+								>
 							</li>
-							<li class="sub-menu__list-item">
-								<a class="sub-menu__link link-primary" href="#">О компании</a>
+							<li class="sub-menu__list-item dropdown__menu-item">
+								<a
+									class="sub-menu__link dropdown__menu-link link-primary"
+									href="#"
+									>О компании</a
+								>
 							</li>
-							<li class="sub-menu__list-item">
-								<a class="sub-menu__link link-primary" href="#">Пользовательское
-									соглашение</a>
+							<li class="sub-menu__list-item dropdown__menu-item">
+								<a
+									class="sub-menu__link dropdown__menu-link link-primary"
+									href="#"
+									>Пользовательское соглашение</a
+								>
 							</li>
-							<li class="sub-menu__list-item">
-								<a class="sub-menu__link link-primary" href="#">Условия
-									гарантии</a>
+							<li class="sub-menu__list-item dropdown__menu-item">
+								<a
+									class="sub-menu__link dropdown__menu-link link-primary"
+									href="#"
+									>Условия гарантии</a
+								>
 							</li>
-							<li class="sub-menu__list-item">
-								<a class="sub-menu__link link-primary" href="#">Ресторан</a>
+							<li class="sub-menu__list-item dropdown__menu-item">
+								<a
+									class="sub-menu__link dropdown__menu-link link-primary"
+									href="#"
+									>Ресторан</a
+								>
 							</li>
-							<li class="sub-menu__list-item">
-								<a class="sub-menu__link link-primary" href="#">Контакты</a>
+							<li class="sub-menu__list-item dropdown__menu-item">
+								<a
+									class="sub-menu__link dropdown__menu-link link-primary"
+									href="#"
+									>Контакты</a
+								>
 							</li>
-							<li class="sub-menu__list-item">
-								<a class="sub-menu__link link-primary" href="#">Поддержка</a>
+							<li class="sub-menu__list-item dropdown__menu-item">
+								<a
+									class="sub-menu__link dropdown__menu-link link-primary"
+									href="#"
+									>Поддержка</a
+								>
 							</li>
-							<li class="sub-menu__list-item">
-								<a class="sub-menu__link link-primary" href="#">Отследить
-									заказ</a>
+							<li class="sub-menu__list-item dropdown__menu-item">
+								<a
+									class="sub-menu__link dropdown__menu-link link-primary"
+									href="#"
+									>Отследить заказ</a
+								>
 							</li>
 						</ul>
-
 					</li>
 				</ul>
 
-				<div class="menu-mobile">
-					<!-- <hr class="separator"> -->
-					<a class="login menu-mobile__login" href="#">Войти в аккаунт</a>
-					<hr class="separator">
-					<ul class="menu-mobile__list">
-						<li class="menu-mobile__list-item">
-							<a class="menu-mobile__link" href="#">Акции</a>
-						</li>
-						<li class="menu-mobile__list-item">
-							<a class="menu-mobile__link" href="#">О компании</a>
-						</li>
-						<li class="menu-mobile__list-item">
-							<a class="menu-mobile__link" href="#">Пользовательское
-								соглашение</a>
-						</li>
-						<li class="menu-mobile__list-item">
-							<a class="menu-mobile__link" href="#">Условия гарантии</a>
-						</li>
-						<li class="menu-mobile__list-item">
-							<a class="menu-mobile__link" href="#">Ресторан</a>
-						</li>
-						<li class="menu-mobile__list-item">
-							<a class="menu-mobile__link" href="#">Контакты</a>
-						</li>
-						<li class="menu-mobile__list-item">
-							<a class="menu-mobile__link" href="#">Поддержка</a>
-						</li>
-						<li class="menu-mobile__list-item">
-							<a class="menu-mobile__link" href="#">Отследить заказ</a>
-						</li>
-					</ul>
-					<hr class="separator">
+				<div class="menu-mobile" id="mobile-navigation">
+					<div class="menu-mobile__login-wrapper">
+						<div class="menu-mobile__login-header">
+							<a class="link-primary login menu-mobile__login" href="#"
+								>Войти в аккаунт</a
+							>
+							100 бонусов
+						</div>
+						<ul class="menu-mobile__login-options">
+							<li class="menu-mobile__login-option">
+								<a class="link-primary menu-mobile__link" href=""
+									>История заказов</a
+								>
+							</li>
+							<li class="menu-mobile__login-option">
+								<a class="link-primary menu-mobile__link" href="">Настройки</a>
+							</li>
+							<li class="menu-mobile__login-option">
+								<a class="link-primary menu-mobile__link" href=""
+									>Выход из аккаунта</a
+								>
+							</li>
+						</ul>
+					</div>
 					<div class="contacts menu-mobile__contacts">
-						<a class="contacts__phone contact-align-text"
-							href="tel:+79262231011">+7 (926) 223-10-11</a>
-						<a class="contacts__address contact-align-text" href="#">Москва, ул.
-							Юных Ленинцев, д.99</a>
+						<a
+							class="link-primary contacts__phone contact-align-text"
+							href="tel:+79262231011"
+							>+7 (926) 223-10-11</a
+						>
+						<a
+							class="link-primary contacts__address contact-align-text"
+							href="#"
+							>Москва, ул. Юных Ленинцев, д.99</a
+						>
 						<div class="contacts__socials">
-							<a class="contacts__facebook contact-align-text"
-								href="#">Facebook</a>
-							<a class="contacts__instagram contact-align-text"
-								href="#">Instagram</a>
+							<a
+								class="link-primary contacts__facebook contact-align-text"
+								href="#"
+								>Facebook</a
+							>
+							<a
+								class="link-primary contacts__instagram contact-align-text"
+								href="#"
+								>Instagram</a
+							>
 						</div>
 					</div>
-					<hr class="separator">
-					<p class="menu-mobile__working-hours">Время работы: с 11:00 до
-						23:00</p>
+					<p class="menu-mobile__working-hours">
+						Время работы: с 11:00 до 23:00
+					</p>
 				</div>
 			</nav>
-
 		</div>
-		<div class="cart-btn">
+		<div class="cart-btn" id="cart-button">
 			<span class="cart-btn__counter-mobile">0</span>
 			<span class="cart-btn__counter"></span>
-			<button class="cart-btn__button button-filled">1000 <span
-					class="currency">&#8381</span></button>
+			<button class="cart-btn__button button-filled">
+				1000 <span class="currency">&#8381;</span>
+			</button>
 		</div>
-
 	</div>
-	<hr class="separator">
+	<hr class="separator" />
 </header>
 
-		<main class="page">
-			<div class="page__container">
 
-				<section class="cart page__cart">
-
+			<main class="page">
+				<div class="page__container"><section class="cart page__cart">
 	<div class="order cart__order">
 		<h1 class="cart__title">Ваш заказ</h1>
 		<ul class="order__list cart__order-list">
-
 			<li class="order__list-item cart__order-list-item">
-				<img class="order__item-image cart__order-item-image"
-					src="img/pizza1.jpg" alt="Пицца">
+				<img
+					class="order__item-image cart__order-item-image"
+					src="img/pizza1.jpg"
+					alt="Пицца"
+				/>
 				<div class="order__item-info cart__item-info">
 					<div class="order__item-text cart__order-item-text">
-						<h3 class="order__item-title cart__order-item-title">Чикен
-							Сладкий Чили</h3>
+						<h3 class="order__item-title cart__order-item-title">
+							Чикен Сладкий Чили
+						</h3>
 						<p class="order__item-details cart__order-item-details">
 							Традиционное тесто, 23 см
 						</p>
 					</div>
 					<div class="order__price-quantity cart__order-price-quantity">
 						<div class="order__item-controls">
-							<button class="hide-text order__remove-item">Уменьшить на
-								один</button>
+							<button class="hide-text order__remove-item">
+								Уменьшить на один
+							</button>
 							<p class="order__item-quantity">1</p>
-							<button class="hide-text order__add-item">Увеличить на
-								один</button>
+							<button class="hide-text order__add-item">
+								Увеличить на один
+							</button>
 						</div>
 						<p class="order__item-price cart__item-price">499 ₽</p>
 					</div>
@@ -214,23 +314,29 @@
 			</li>
 
 			<li class="order__list-item cart__order-list-item">
-				<img class="order__item-image cart__order-item-image"
-					src="img/pizza2.jpg" alt="Пицца">
+				<img
+					class="order__item-image cart__order-item-image"
+					src="img/pizza2.jpg"
+					alt="Пицца"
+				/>
 				<div class="order__item-info cart__item-info">
 					<div class="order__item-text cart__order-item-text">
-						<h3 class="order__item-title cart__order-item-title">Чикен
-							Сладкий Чили</h3>
+						<h3 class="order__item-title cart__order-item-title">
+							Чикен Сладкий Чили
+						</h3>
 						<p class="order__item-details cart__order-item-details">
 							Традиционное тесто, 23 см
 						</p>
 					</div>
 					<div class="order__price-quantity cart__order-price-quantity">
 						<div class="order__item-controls">
-							<button class="hide-text order__remove-item">Уменьшить на
-								один</button>
+							<button class="hide-text order__remove-item">
+								Уменьшить на один
+							</button>
 							<p class="order__item-quantity">1</p>
-							<button class="hide-text order__add-item">Увеличить на
-								один</button>
+							<button class="hide-text order__add-item">
+								Увеличить на один
+							</button>
 						</div>
 						<p class="order__item-price cart__item-price">499 ₽</p>
 					</div>
@@ -238,23 +344,29 @@
 			</li>
 
 			<li class="order__list-item cart__order-list-item">
-				<img class="order__item-image cart__order-item-image"
-					src="img/pizza3.jpg" alt="Пицца">
+				<img
+					class="order__item-image cart__order-item-image"
+					src="img/pizza3.jpg"
+					alt="Пицца"
+				/>
 				<div class="order__item-info cart__item-info">
 					<div class="order__item-text cart__order-item-text">
-						<h3 class="order__item-title cart__order-item-title">Чикен
-							Сладкий Чили</h3>
+						<h3 class="order__item-title cart__order-item-title">
+							Чикен Сладкий Чили
+						</h3>
 						<p class="order__item-details cart__order-item-details">
 							Традиционное тесто, 23 см
 						</p>
 					</div>
 					<div class="order__price-quantity cart__order-price-quantity">
 						<div class="order__item-controls">
-							<button class="hide-text order__remove-item">Уменьшить на
-								один</button>
+							<button class="hide-text order__remove-item">
+								Уменьшить на один
+							</button>
 							<p class="order__item-quantity">1</p>
-							<button class="hide-text order__add-item">Увеличить на
-								один</button>
+							<button class="hide-text order__add-item">
+								Увеличить на один
+							</button>
 						</div>
 						<p class="order__item-price cart__item-price">499 ₽</p>
 					</div>
@@ -262,42 +374,51 @@
 			</li>
 
 			<li class="order__list-item cart__order-list-item">
-				<img class="order__item-image cart__order-item-image"
-					src="img/pizza4.jpg" alt="Пицца">
+				<img
+					class="order__item-image cart__order-item-image"
+					src="img/pizza4.jpg"
+					alt="Пицца"
+				/>
 				<div class="order__item-info cart__item-info">
 					<div class="order__item-text cart__order-item-text">
-						<h3 class="order__item-title cart__order-item-title">Чикен
-							Сладкий Чили</h3>
+						<h3 class="order__item-title cart__order-item-title">
+							Чикен Сладкий Чили
+						</h3>
 						<p class="order__item-details cart__order-item-details">
 							Традиционное тесто, 23 см
 						</p>
 					</div>
 					<div class="order__price-quantity cart__order-price-quantity">
 						<div class="order__item-controls">
-							<button class="hide-text order__remove-item">Уменьшить на
-								один</button>
+							<button class="hide-text order__remove-item">
+								Уменьшить на один
+							</button>
 							<p class="order__item-quantity">1</p>
-							<button class="hide-text order__add-item">Увеличить на
-								один</button>
+							<button class="hide-text order__add-item">
+								Увеличить на один
+							</button>
 						</div>
 						<p class="order__item-price cart__item-price">499 ₽</p>
 					</div>
 				</div>
 			</li>
-
 		</ul>
 
 		<div class="cart__promo">
 			<form class="cart__promo-form" action="">
-				<input class="cart__promo-input" id="promocode" type="text"
-					placeholder="Промокод">
-				<button class="button button-filled send-button cart__promo-send"><span
-						class="visually-hidden">Отправить</span>
+				<input
+					class="cart__promo-input"
+					id="promocode"
+					type="text"
+					placeholder="Промокод"
+				/>
+				<button class="button button-filled send-button cart__promo-send">
+					<span class="visually-hidden">Отправить</span>
 					<svg class="icon-send" width="37" height="32" viewBox="0 0 37 32">
 						<title>send</title>
 						<path
-							d="M34.393 12.787l-29.507-12.061c-1.243-0.508-2.647-0.285-3.665 0.583s-1.443 2.205-1.111 3.49l2.626 10.146h12.859c0.592 0 1.072 0.473 1.072 1.056s-0.48 1.056-1.072 1.056h-12.859l-2.626 10.146c-0.333 1.285 0.093 2.622 1.111 3.49 1.020 0.869 2.424 1.090 3.665 0.583l29.507-12.061c1.343-0.549 2.178-1.78 2.178-3.213s-0.834-2.664-2.178-3.213z">
-						</path>
+							d="M34.393 12.787l-29.507-12.061c-1.243-0.508-2.647-0.285-3.665 0.583s-1.443 2.205-1.111 3.49l2.626 10.146h12.859c0.592 0 1.072 0.473 1.072 1.056s-0.48 1.056-1.072 1.056h-12.859l-2.626 10.146c-0.333 1.285 0.093 2.622 1.111 3.49 1.020 0.869 2.424 1.090 3.665 0.583l29.507-12.061c1.343-0.549 2.178-1.78 2.178-3.213s-0.834-2.664-2.178-3.213z"
+						></path>
 					</svg>
 				</button>
 			</form>
@@ -308,188 +429,242 @@
 		</div>
 	</div>
 
-
-
-
 	<div class="cart__order-add">
-
 		<div class="cart__add-food">
 			<h2 class="cart__subheading">Добавить к заказу?</h2>
 			<div class="add-food__slider-parent">
 				<div class="swiper-container add-food__slider">
 					<div class="swiper-wrapper add-food__wrapper">
-
 						<div class="swiper-slide card order-add">
 							<div class="card__image-container order-add__image-container">
-								<img class="card__image order-add__image" src="img/fries.jpg"
-									alt="">
+								<img
+									class="card__image order-add__image"
+									src="img/fries.jpg"
+									alt=""
+								/>
 							</div>
 							<div class="card__main-content order-add__content">
 								<div class="card__content-top order-add__content-top">
-									<h3 class="card__title-large order-add__title">Картофель из
-										печи</h3>
+									<h3 class="card__title-large order-add__title">
+										Картофель из печи
+									</h3>
 									<p class="card__text-small order-add__weight">Порция 95 г</p>
 								</div>
 								<div class="card__content-bottom">
 									<button
-										class="button button-filled card__button-add order-add__button">189
-										₽</button>
+										class="button button-filled card__button-add order-add__button"
+									>
+										189 ₽
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide card order-add">
 							<div class="card__image-container order-add__image-container">
-								<img class="card__image order-add__image" src="img/naggets.jpg"
-									alt="">
+								<img
+									class="card__image order-add__image"
+									src="img/naggets.jpg"
+									alt=""
+								/>
 							</div>
 							<div class="card__main-content order-add__content">
 								<div class="card__content-top order-add__content-top">
-									<h3 class="card__title-large order-add__title">Картофель из
-										печи</h3>
+									<h3 class="card__title-large order-add__title">
+										Картофель из печи
+									</h3>
 									<p class="card__text-small order-add__weight">Порция 95 г</p>
 								</div>
 								<div class="card__content-bottom">
 									<button
-										class="button button-filled card__button-add order-add__button">189
-										₽</button>
+										class="button button-filled card__button-add order-add__button"
+									>
+										189 ₽
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide card order-add">
 							<div class="card__image-container order-add__image-container">
-								<img class="card__image order-add__image" src="img/bagel.jpg"
-									alt="">
+								<img
+									class="card__image order-add__image"
+									src="img/bagel.jpg"
+									alt=""
+								/>
 							</div>
 							<div class="card__main-content order-add__content">
 								<div class="card__content-top order-add__content-top">
-									<h3 class="card__title-large order-add__title">Картофель из
-										печи</h3>
+									<h3 class="card__title-large order-add__title">
+										Картофель из печи
+									</h3>
 									<p class="card__text-small order-add__weight">Порция 95 г</p>
 								</div>
 								<div class="card__content-bottom">
 									<button
-										class="button button-filled card__button-add order-add__button">189
-										₽</button>
+										class="button button-filled card__button-add order-add__button"
+									>
+										189 ₽
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide card order-add">
 							<div class="card__image-container order-add__image-container">
-								<img class="card__image order-add__image" src="img/roll.jpg"
-									alt="">
+								<img
+									class="card__image order-add__image"
+									src="img/roll.jpg"
+									alt=""
+								/>
 							</div>
 							<div class="card__main-content order-add__content">
 								<div class="card__content-top order-add__content-top">
-									<h3 class="card__title-large order-add__title">Картофель из
-										печи</h3>
+									<h3 class="card__title-large order-add__title">
+										Картофель из печи
+									</h3>
 									<p class="card__text-small order-add__weight">Порция 95 г</p>
 								</div>
 								<div class="card__content-bottom">
 									<button
-										class="button button-filled card__button-add order-add__button">189
-										₽</button>
+										class="button button-filled card__button-add order-add__button"
+									>
+										189 ₽
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide card order-add">
 							<div class="card__image-container order-add__image-container">
-								<img class="card__image order-add__image" src="img/strips.jpg"
-									alt="">
+								<img
+									class="card__image order-add__image"
+									src="img/strips.jpg"
+									alt=""
+								/>
 							</div>
 							<div class="card__main-content order-add__content">
 								<div class="card__content-top order-add__content-top">
-									<h3 class="card__title-large order-add__title">Картофель из
-										печи</h3>
+									<h3 class="card__title-large order-add__title">
+										Картофель из печи
+									</h3>
 									<p class="card__text-small order-add__weight">Порция 95 г</p>
 								</div>
 								<div class="card__content-bottom">
 									<button
-										class="button button-filled card__button-add order-add__button">189
-										₽</button>
+										class="button button-filled card__button-add order-add__button"
+									>
+										189 ₽
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide card order-add">
 							<div class="card__image-container order-add__image-container">
-								<img class="card__image order-add__image" src="img/fries.jpg"
-									alt="">
+								<img
+									class="card__image order-add__image"
+									src="img/fries.jpg"
+									alt=""
+								/>
 							</div>
 							<div class="card__main-content order-add__content">
 								<div class="card__content-top order-add__content-top">
-									<h3 class="card__title-large order-add__title">Картофель из
-										печи</h3>
+									<h3 class="card__title-large order-add__title">
+										Картофель из печи
+									</h3>
 									<p class="card__text-small order-add__weight">Порция 95 г</p>
 								</div>
 								<div class="card__content-bottom">
 									<button
-										class="button button-filled card__button-add order-add__button">189
-										₽</button>
+										class="button button-filled card__button-add order-add__button"
+									>
+										189 ₽
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide card order-add">
 							<div class="card__image-container order-add__image-container">
-								<img class="card__image order-add__image" src="img/fries.jpg"
-									alt="">
+								<img
+									class="card__image order-add__image"
+									src="img/fries.jpg"
+									alt=""
+								/>
 							</div>
 							<div class="card__main-content order-add__content">
 								<div class="card__content-top order-add__content-top">
-									<h3 class="card__title-large order-add__title">Картофель из
-										печи</h3>
+									<h3 class="card__title-large order-add__title">
+										Картофель из печи
+									</h3>
 									<p class="card__text-small order-add__weight">Порция 95 г</p>
 								</div>
 								<div class="card__content-bottom">
 									<button
-										class="button button-filled card__button-add order-add__button">189
-										₽</button>
+										class="button button-filled card__button-add order-add__button"
+									>
+										189 ₽
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide card order-add">
 							<div class="card__image-container order-add__image-container">
-								<img class="card__image order-add__image" src="img/fries.jpg"
-									alt="">
+								<img
+									class="card__image order-add__image"
+									src="img/fries.jpg"
+									alt=""
+								/>
 							</div>
 							<div class="card__main-content order-add__content">
 								<div class="card__content-top order-add__content-top">
-									<h3 class="card__title-large order-add__title">Картофель из
-										печи</h3>
+									<h3 class="card__title-large order-add__title">
+										Картофель из печи
+									</h3>
 									<p class="card__text-small order-add__weight">Порция 95 г</p>
 								</div>
 								<div class="card__content-bottom">
 									<button
-										class="button button-filled card__button-add order-add__button">189
-										₽</button>
+										class="button button-filled card__button-add order-add__button"
+									>
+										189 ₽
+									</button>
 								</div>
 							</div>
 						</div>
-
 					</div>
 					<button class="button-filled order-add__next-slide button-slider">
-						<svg class="icon-arrow arrow-right" role="img" aria-hidden="true"
-							width="32" height="32" viewBox="0 0 32 32">
+						<svg
+							class="icon-arrow arrow-right"
+							role="img"
+							aria-hidden="true"
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+						>
 							<title>Следующий слайд</title>
 							<path
-								d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
-							</path>
+								d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z"
+							></path>
 						</svg>
 						<span class="visually-hidden">Следующий слайд</span>
 					</button>
 
 					<button class="button-filled order-add__prev-slide button-slider">
-						<svg class="icon-arrow arrow-left" role="img" aria-hidden="true"
-							width="32" height="32" viewBox="0 0 32 32">
+						<svg
+							class="icon-arrow arrow-left"
+							role="img"
+							aria-hidden="true"
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+						>
 							<title>Предыдущий слайд</title>
 							<path
-								d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
-							</path>
+								d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z"
+							></path>
 						</svg>
 						<span class="visually-hidden">Предыдущий слайд</span>
 					</button>
@@ -505,42 +680,57 @@
 						<div class="swiper-wrapper add-food__wrapper">
 							<div class="swiper-slide card order-add">
 								<div class="card__image-container order-add__image-container">
-									<img class="card__image order-add__image"
-										src="img/cheese-sauce.jpg" alt="">
+									<img
+										class="card__image order-add__image"
+										src="img/cheese-sauce.jpg"
+										alt=""
+									/>
 								</div>
 								<div class="card__main-content order-add__content">
 									<div class="card__content-top order-add__content-top">
-										<h3 class="card__title-large order-add__title">Сырный соус
+										<h3 class="card__title-large order-add__title">
+											Сырный соус
 										</h3>
 									</div>
 									<div class="card__content-bottom">
 										<button
-											class="button button-filled card__button-add order-add__button">39
-											₽</button>
+											class="button button-filled card__button-add order-add__button"
+										>
+											39 ₽
+										</button>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide card order-add">
 								<div class="card__image-container order-add__image-container">
-									<img class="card__image order-add__image"
-										src="img/bbq-sauce.jpg" alt="">
+									<img
+										class="card__image order-add__image"
+										src="img/bbq-sauce.jpg"
+										alt=""
+									/>
 								</div>
 								<div class="card__main-content order-add__content">
 									<div class="card__content-top order-add__content-top">
-										<h3 class="card__title-large order-add__title">Барбекю соус
+										<h3 class="card__title-large order-add__title">
+											Барбекю соус
 										</h3>
 									</div>
 									<div class="card__content-bottom">
 										<button
-											class="button button-filled card__button-add order-add__button">39
-											₽</button>
+											class="button button-filled card__button-add order-add__button"
+										>
+											39 ₽
+										</button>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide card order-add">
 								<div class="card__image-container order-add__image-container">
-									<img class="card__image order-add__image"
-										src="img/ranch-sauce.jpg" alt="">
+									<img
+										class="card__image order-add__image"
+										src="img/ranch-sauce.jpg"
+										alt=""
+									/>
 								</div>
 								<div class="card__main-content order-add__content">
 									<div class="card__content-top order-add__content-top">
@@ -548,15 +738,20 @@
 									</div>
 									<div class="card__content-bottom">
 										<button
-											class="button button-filled card__button-add order-add__button">39
-											₽</button>
+											class="button button-filled card__button-add order-add__button"
+										>
+											39 ₽
+										</button>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide card order-add">
 								<div class="card__image-container order-add__image-container">
-									<img class="card__image order-add__image"
-										src="img/condensed-milk.jpg" alt="">
+									<img
+										class="card__image order-add__image"
+										src="img/condensed-milk.jpg"
+										alt=""
+									/>
 								</div>
 								<div class="card__main-content order-add__content">
 									<div class="card__content-top order-add__content-top">
@@ -564,49 +759,66 @@
 									</div>
 									<div class="card__content-bottom">
 										<button
-											class="button button-filled card__button-add order-add__button">39
-											₽</button>
+											class="button button-filled card__button-add order-add__button"
+										>
+											39 ₽
+										</button>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide card order-add">
 								<div class="card__image-container order-add__image-container">
-									<img class="card__image order-add__image"
-										src="img/cheese-sauce.jpg" alt="">
+									<img
+										class="card__image order-add__image"
+										src="img/cheese-sauce.jpg"
+										alt=""
+									/>
 								</div>
 								<div class="card__main-content order-add__content">
 									<div class="card__content-top order-add__content-top">
-										<h3 class="card__title-large order-add__title">Сырный соус
+										<h3 class="card__title-large order-add__title">
+											Сырный соус
 										</h3>
 									</div>
 									<div class="card__content-bottom">
 										<button
-											class="button button-filled card__button-add order-add__button">39
-											₽</button>
+											class="button button-filled card__button-add order-add__button"
+										>
+											39 ₽
+										</button>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide card order-add">
 								<div class="card__image-container order-add__image-container">
-									<img class="card__image order-add__image"
-										src="img/bbq-sauce.jpg" alt="">
+									<img
+										class="card__image order-add__image"
+										src="img/bbq-sauce.jpg"
+										alt=""
+									/>
 								</div>
 								<div class="card__main-content order-add__content">
 									<div class="card__content-top order-add__content-top">
-										<h3 class="card__title-large order-add__title">Барбекю соус
+										<h3 class="card__title-large order-add__title">
+											Барбекю соус
 										</h3>
 									</div>
 									<div class="card__content-bottom">
 										<button
-											class="button button-filled card__button-add order-add__button">39
-											₽</button>
+											class="button button-filled card__button-add order-add__button"
+										>
+											39 ₽
+										</button>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide card order-add">
 								<div class="card__image-container order-add__image-container">
-									<img class="card__image order-add__image"
-										src="img/ranch-sauce.jpg" alt="">
+									<img
+										class="card__image order-add__image"
+										src="img/ranch-sauce.jpg"
+										alt=""
+									/>
 								</div>
 								<div class="card__main-content order-add__content">
 									<div class="card__content-top order-add__content-top">
@@ -614,15 +826,20 @@
 									</div>
 									<div class="card__content-bottom">
 										<button
-											class="button button-filled card__button-add order-add__button">39
-											₽</button>
+											class="button button-filled card__button-add order-add__button"
+										>
+											39 ₽
+										</button>
 									</div>
 								</div>
 							</div>
 							<div class="swiper-slide card order-add">
 								<div class="card__image-container order-add__image-container">
-									<img class="card__image order-add__image"
-										src="img/condensed-milk.jpg" alt="">
+									<img
+										class="card__image order-add__image"
+										src="img/condensed-milk.jpg"
+										alt=""
+									/>
 								</div>
 								<div class="card__main-content order-add__content">
 									<div class="card__content-top order-add__content-top">
@@ -630,29 +847,43 @@
 									</div>
 									<div class="card__content-bottom">
 										<button
-											class="button button-filled card__button-add order-add__button">39
-											₽</button>
+											class="button button-filled card__button-add order-add__button"
+										>
+											39 ₽
+										</button>
 									</div>
 								</div>
 							</div>
 						</div>
 						<button class="button-filled order-add__next-slide button-slider">
-							<svg class="icon-arrow arrow-right" role="img" aria-hidden="true"
-								width="32" height="32" viewBox="0 0 32 32">
+							<svg
+								class="icon-arrow arrow-right"
+								role="img"
+								aria-hidden="true"
+								width="32"
+								height="32"
+								viewBox="0 0 32 32"
+							>
 								<title>Следующий слайд</title>
 								<path
-									d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
-								</path>
+									d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z"
+								></path>
 							</svg>
 							<span class="visually-hidden">Следующий слайд</span>
 						</button>
 						<button class="button-filled order-add__prev-slide button-slider">
-							<svg class="icon-arrow arrow-left" role="img" aria-hidden="true"
-								width="32" height="32" viewBox="0 0 32 32">
+							<svg
+								class="icon-arrow arrow-left"
+								role="img"
+								aria-hidden="true"
+								width="32"
+								height="32"
+								viewBox="0 0 32 32"
+							>
 								<title>Предыдущий слайд</title>
 								<path
-									d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
-								</path>
+									d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z"
+								></path>
 							</svg>
 							<span class="visually-hidden">Предыдущий слайд</span>
 						</button>
@@ -660,270 +891,386 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
+	<form class="cart__order-form order-form" id="cart-form" name="cart-form">
+		<section class="order-form__section about">
+			<h2 class="order-form__header">Личные данные</h2>
+			<fieldset class="order-form__fieldset">
+				<legend class="order-form__legend visually-hidden">
+					Личные данные
+				</legend>
+				<ul class="order-form__details-list">
+					<li class="order-form__details-list-item">
+						<label class="order-form__label" for="username"
+							>Имя<span aria-label="required">*</span></label
+						>
+						<input
+							class="text-input"
+							id="username"
+							type="text"
+							name="username"
+							placeholder="Алексей"
+						/>
+					</li>
+					<li class="order-form__details-list-item">
+						<label class="order-form__label" for="phone"
+							>Номер телефона<span aria-label="required">*</span></label
+						>
+						<input
+							class="text-input"
+							id="phone"
+							type="text"
+							name="phone"
+							placeholder="+7"
+						/>
+					</li>
+					<li class="order-form__details-list-item">
+						<label class="order-form__label" for="email">Почта</label>
+						<input
+							class="text-input"
+							id="email"
+							type="email"
+							name="email"
+							placeholder="mail@gmail.com"
+						/>
+					</li>
+				</ul>
+			</fieldset>
+		</section>
 
-		<form class="cart__order-form order-form" id="cart-form" name="cart-form">
-			<section class="order-form__section about">
-				<h2 class="order-form__header">Личные данные</h2>
-				<fieldset class="order-form__fieldset">
-					<legend class="order-form__legend visually-hidden">Личные данные
-					</legend>
-					<ul class="order-form__details-list">
-						<li class="order-form__details-list-item">
-							<label class="order-form__label" for="username">Имя<span
-									aria-label="required">*</span></label>
-							<input class="text-input" id="username" type="text"
-								name="username" placeholder="Алексей" />
+		<section class="order-form__section delivery">
+			<div class="delivery__heading">
+				<h2 class="order-form__header delivery__header">Доставка</h2>
+				<div class="delivery__tablist automatic" role="tablist">
+					<button
+						class="button button-outlined delivery__tab"
+						id="tab-delivery"
+						type="button"
+						role="tab"
+						aria-selected="true"
+						aria-controls="delivery-tabpanel"
+					>
+						<span>Доставка</span>
+					</button>
+					<button
+						class="button button-outlined delivery__tab"
+						id="tab-pickup"
+						type="button"
+						role="tab"
+						aria-selected="false"
+						aria-controls="pickup-tabpanel"
+						tabindex="-1"
+					>
+						<span>Самовывоз</span>
+					</button>
+				</div>
+			</div>
+			<fieldset class="order-form__fieldset">
+				<legend class="order-form__legend visually-hidden">Доставка</legend>
+
+				<div
+					id="delivery-tabpanel"
+					role="tabpanel"
+					tabindex="0"
+					aria-labelledby="tab-delivery"
+				>
+					<ul class="delivery__address-list">
+						<li class="delivery__address-list-item">
+							<label class="order-form__label" for="address"
+								>Улица<span aria-label="required">*</span></label
+							>
+							<input
+								class="text-input"
+								id="address"
+								type="text"
+								name="address"
+								placeholder="Пушкина"
+							/>
 						</li>
-						<li class="order-form__details-list-item">
-							<label class="order-form__label" for="phone">Номер телефона<span
-									aria-label="required">*</span></label>
-							<input class="text-input" id="phone" type="text" name="phone"
-								placeholder="+7" />
+						<li class="delivery__address-list-item">
+							<label class="order-form__label" for="address_house"
+								>Дом<span aria-label="required">*</span></label
+							>
+							<input
+								class="text-input"
+								id="address_house"
+								type="text"
+								name="address_house"
+								placeholder="1а"
+							/>
 						</li>
-						<li class="order-form__details-list-item">
-							<label class="order-form__label" for="email">Почта</label>
-							<input class="text-input" id="email" type="email" name="email"
-								placeholder="mail@gmail.com" />
+						<li class="delivery__address-list-item">
+							<label class="order-form__label" for="address_entrance"
+								>Подъезд</label
+							>
+							<input
+								class="text-input"
+								id="address_entrance"
+								type="text"
+								name="address_entrance"
+								placeholder="1"
+							/>
+						</li>
+						<li class="delivery__address-list-item">
+							<label class="order-form__label" for="address_floor">Этаж</label>
+							<input
+								class="text-input"
+								id="address_floor"
+								type="text"
+								name="address_floor"
+								placeholder="2"
+							/>
+						</li>
+						<li class="delivery__address-list-item">
+							<label class="order-form__label" for="address_flat"
+								>Квартира</label
+							>
+							<input
+								class="text-input"
+								id="address_flat"
+								type="text"
+								name="address_flat"
+								placeholder="3"
+							/>
+						</li>
+						<li class="delivery__address-list-item">
+							<label class="order-form__label" for="address_intercom"
+								>Домофон</label
+							>
+							<input
+								class="text-input"
+								id="address_intercom"
+								type="text"
+								name="address_intercom"
+								placeholder="0000"
+							/>
 						</li>
 					</ul>
-				</fieldset>
-			</section>
+				</div>
 
-			<section class="order-form__section delivery">
-				<div class="delivery__heading">
-					<h2 class="order-form__header delivery__header">Доставка</h2>
-					<div class="delivery__tablist automatic" role="tablist">
-						<button class="button button-outlined delivery__tab"
-							id="tab-delivery" type="button" role="tab" aria-selected="true"
-							aria-controls="delivery-tabpanel">
-							<span>Доставка</span>
-						</button>
-						<button class="button button-outlined delivery__tab" id="tab-pickup"
-							type="button" role="tab" aria-selected="false"
-							aria-controls="pickup-tabpanel" tabindex="-1">
-							<span>Самовывоз</span>
-						</button>
+				<div
+					id="pickup-tabpanel"
+					role="tabpanel"
+					tabindex="0"
+					aria-labelledby="tab-pickup"
+				>
+					<p
+						class="order-form__label delivery__restaraunt-label"
+						id="delivery__time-label"
+					>
+						Ресторан<span aria-label="required">*</span>
+					</p>
+					<div class="select-wrapper">
+						<select
+							class="select-element delivery__select delivery__select-restaraunt"
+							name=""
+							id=""
+						>
+							<option value="First">Москва, улица Пушкина 22</option>
+							<option value="Second">Москва, улица Мишкина 21</option>
+							<option value="Third">Москва, улица Ворона 41</option>
+							<option value="Fourth">Москва, улица Светлая 92</option>
+							<option value="Fifth">Москва, улица Темная 13</option>
+						</select>
+						<svg
+							class="select-arrow cart__select-arrow"
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+						>
+							<title>arrowsvg</title>
+							<path
+								d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z"
+							></path>
+						</svg>
 					</div>
 				</div>
-				<fieldset class="order-form__fieldset">
-					<legend class="order-form__legend visually-hidden">Доставка</legend>
 
-					<div id="delivery-tabpanel" role="tabpanel" tabindex="0"
-						aria-labelledby="tab-delivery">
-						<ul class="delivery__address-list">
-							<li class="delivery__address-list-item">
-								<label class="order-form__label" for="address">Улица<span
-										aria-label="required">*</span></label>
-								<input class="text-input" id="address" type="text"
-									name="address" placeholder="Пушкина" />
-							</li>
-							<li class="delivery__address-list-item">
-								<label class="order-form__label" for="address_house">Дом<span
-										aria-label="required">*</span></label>
-								<input class="text-input" id="address_house" type="text"
-									name="address_house" placeholder="1а" />
-							</li>
-							<li class="delivery__address-list-item">
-								<label class="order-form__label"
-									for="address_entrance">Подъезд</label>
-								<input class="text-input" id="address_entrance" type="text"
-									name="address_entrance" placeholder="1" />
-							</li>
-							<li class="delivery__address-list-item">
-								<label class="order-form__label"
-									for="address_floor">Этаж</label>
-								<input class="text-input" id="address_floor" type="text"
-									name="address_floor" placeholder="2" />
-							</li>
-							<li class="delivery__address-list-item">
-								<label class="order-form__label"
-									for="address_flat">Квартира</label>
-								<input class="text-input" id="address_flat" type="text"
-									name="address_flat" placeholder="3" />
-							</li>
-							<li class="delivery__address-list-item">
-								<label class="order-form__label"
-									for="address_intercom">Домофон</label>
-								<input class="text-input" id="address_intercom" type="text"
-									name="address_intercom" placeholder="0000" />
-							</li>
-						</ul>
-					</div>
+				<div class="delivery__time">
+					<p
+						class="delivery__time-label order-form__label"
+						id="delivery__time-label"
+					>
+						Когда выполнить заказ?
+					</p>
+					<ul class="order-form__radio-list">
+						<li class="order-form__radio-list-item">
+							<input
+								class="radio-button delivery__radio"
+								id="delivery"
+								type="radio"
+								name="delivery-option"
+								value="delivery"
+							/>
+							<label class="delivery__option-label" for="delivery"
+								>Как можно скорее</label
+							>
+						</li>
+						<li class="order-form__radio-list-item delivery__date-time-radio">
+							<input
+								class="radio-button delivery__radio delivery__pickup"
+								id="pickup"
+								type="radio"
+								name="delivery-option"
+								value="pickup"
+							/>
+							<label class="delivery__option-label" for="pickup"
+								>По времени</label
+							>
 
-					<div id="pickup-tabpanel" role="tabpanel" tabindex="0"
-						aria-labelledby="tab-pickup">
-						<p class="order-form__label delivery__restaraunt-label"
-							id="delivery__time-label">Ресторан<span
-								aria-label="required">*</span></p>
-						<div class="select-wrapper">
-							<select
-								class="select-element delivery__select delivery__select-restaraunt"
-								name="" id="">
-								<option value="First">Москва, улица Пушкина 22</option>
-								<option value="Second">Москва, улица Мишкина 21</option>
-								<option value="Third">Москва, улица Ворона 41</option>
-								<option value="Fourth">Москва, улица Светлая 92</option>
-								<option value="Fifth">Москва, улица Темная 13</option>
-							</select>
-							<svg class="select-arrow cart__select-arrow " width="32"
-								height="32" viewBox="0 0 32 32">
-								<title>arrowsvg</title>
-								<path
-									d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
-								</path>
-							</svg>
-							<!-- <span class="delivery__select-arrow ">
-
-							</span> -->
-						</div>
-					</div>
-
-					<div class="delivery__time">
-						<p class="delivery__time-label order-form__label"
-							id="delivery__time-label">Когда
-							выполнить заказ?</p>
-						<ul class="order-form__radio-list">
-							<li class="order-form__radio-list-item">
-								<input class="radio-button delivery__radio" id="delivery"
-									type="radio" name="delivery-option" value="delivery" />
-								<label class="delivery__option-label" for="delivery">Как можно
-									скорее</label>
-							</li>
-							<li class="order-form__radio-list-item delivery__date-time-radio">
-								<input class="radio-button delivery__radio delivery__pickup"
-									id="pickup" type="radio" name="delivery-option"
-									value="pickup" />
-								<label class="delivery__option-label" for="pickup">По
-									времени</label>
-
-								<div class="delivery__select-date-time">
-									<div class="delivery__select-date">
-										<input class="text-input delivery__date-input" type="text">
-										<svg class="calendar" width="32" height="32"
-											viewBox="0 0 32 32">
-											<title>calendar</title>
-											<path
-												d="M28.682 3.552h-2.009v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-8.169v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-8.252v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-1.925c-1.834 0-3.326 1.622-3.326 3.552v20.389c0 1.938 1.484 3.508 3.326 3.508h25.348c1.842 0 3.326-1.57 3.326-3.499v-20.398c0.008-1.929-1.484-3.552-3.318-3.552zM30.341 27.492c0 0.965-0.734 1.745-1.65 1.754h-25.365c-0.917 0-1.659-0.781-1.659-1.745v-20.398c0-0.973 0.742-1.798 1.659-1.798h1.925v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h8.252v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h8.169v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h2.009c0.925 0 1.659 0.833 1.659 1.798v20.389z">
-											</path>
-										</svg>
-									</div>
-									<div class="delivery__select-time select-wrapper">
-										<select
-											class="select-element delivery__select delivery__select-time"
-											name="" id="">
-											<option value="First">Время</option>
-											<option value="Second">Ещё время</option>
-											<option value="Third">И ещё время</option>
-											<option value="Fourth">И ещё чуть-чуть времени</option>
-											<option value="Fifth">Тут тоже время</option>
-										</select>
-										<svg class="select-arrow cart__select-arrow" width="32"
-											height="32" viewBox="0 0 32 32">
-											<title>arrowsvg</title>
-											<path
-												d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z">
-											</path>
-										</svg>
-									</div>
+							<div class="delivery__select-date-time">
+								<div class="delivery__select-date">
+									<input class="text-input delivery__date-input" type="text" />
+									<svg
+										class="calendar"
+										width="32"
+										height="32"
+										viewBox="0 0 32 32"
+									>
+										<title>calendar</title>
+										<path
+											d="M28.682 3.552h-2.009v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-8.169v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-8.252v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-1.925c-1.834 0-3.326 1.622-3.326 3.552v20.389c0 1.938 1.484 3.508 3.326 3.508h25.348c1.842 0 3.326-1.57 3.326-3.499v-20.398c0.008-1.929-1.484-3.552-3.318-3.552zM30.341 27.492c0 0.965-0.734 1.745-1.65 1.754h-25.365c-0.917 0-1.659-0.781-1.659-1.745v-20.398c0-0.973 0.742-1.798 1.659-1.798h1.925v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h8.252v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h8.169v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h2.009c0.925 0 1.659 0.833 1.659 1.798v20.389z"
+										></path>
+									</svg>
 								</div>
-							</li>
-						</ul>
-
-
-
-					</div>
-
-
-
-				</fieldset>
-			</section>
-
-
-			<section class="order-form__section payment">
-				<h2 class="order-form__header">Оплата</h2>
-				<fieldset class="order-form__fieldset">
-					<legend class="order-form__legend visually-hidden">Оплата</legend>
-					<ul class="order-form__radio-list">
-						<li class="order-form__radio-list-item">
-							<input class="radio-button delivery__radio" id="cash" type="radio"
-								name="payment-options" value="cash" />
-							<label class="delivery__option-label" for="cash">Наличными</label>
-						</li>
-						<li class="order-form__radio-list-item">
-							<input class="radio-button delivery__radio" id="card" type="radio"
-								name="payment-options" value="card" />
-							<label class="delivery__option-label" for="card">Картой</label>
-						</li>
-						<li class="order-form__radio-list-item">
-							<input class="radio-button delivery__radio" id="applepay"
-								type="radio" name="payment-options" value="applepay" />
-							<label class="delivery__option-label" for="applepay">Apple
-								Pay</label>
-						</li>
-					</ul>
-				</fieldset>
-			</section>
-
-			<section class="order-form__section change-cash">
-				<h2 class="order-form__header">Сдача</h2>
-				<fieldset class="order-form__fieldset">
-					<legend class="order-form__legend visually-hidden">Сдача</legend>
-					<ul class="order-form__radio-list">
-						<li class="order-form__radio-list-item">
-							<input class="radio-button delivery__radio" class="radio-button"
-								id="nochange" type="radio" name="change-cash-options"
-								value="nochange" />
-							<label class="delivery__option-label" for="nochange">Без
-								сдачи</label>
-						</li>
-						<li class="order-form__radio-list-item">
-							<input class="radio-button delivery__radio change-cash__change"
-								id="change" type="radio" name="change-cash-options"
-								value="change" />
-							<label class="delivery__option-label" for="change">Сдача с</label>
-							<div class="delivery__change-wrapper">
-								<input class="text-input delivery__change-input" type="text"
-									placeholder="0">
-								<!-- <svg class="calendar" width="32" height="32"
-									viewBox="0 0 32 32">
-									<title>calendar</title>
-									<path
-										d="M28.682 3.552h-2.009v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-8.169v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-8.252v-1.675c0-0.482-0.375-0.877-0.834-0.877s-0.834 0.395-0.834 0.877v1.675h-1.925c-1.834 0-3.326 1.622-3.326 3.552v20.389c0 1.938 1.484 3.508 3.326 3.508h25.348c1.842 0 3.326-1.57 3.326-3.499v-20.398c0.008-1.929-1.484-3.552-3.318-3.552zM30.341 27.492c0 0.965-0.734 1.745-1.65 1.754h-25.365c-0.917 0-1.659-0.781-1.659-1.745v-20.398c0-0.973 0.742-1.798 1.659-1.798h1.925v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h8.252v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h8.169v1.272c0 0.482 0.375 0.877 0.834 0.877s0.834-0.395 0.834-0.877v-1.272h2.009c0.925 0 1.659 0.833 1.659 1.798v20.389z">
-									</path>
-								</svg> -->
+								<div class="delivery__select-time select-wrapper">
+									<select
+										class="select-element delivery__select delivery__select-time"
+										name=""
+										id=""
+									>
+										<option value="First">Время</option>
+										<option value="Second">Ещё время</option>
+										<option value="Third">И ещё время</option>
+										<option value="Fourth">И ещё чуть-чуть времени</option>
+										<option value="Fifth">Тут тоже время</option>
+									</select>
+									<svg
+										class="select-arrow cart__select-arrow"
+										width="32"
+										height="32"
+										viewBox="0 0 32 32"
+									>
+										<title>arrowsvg</title>
+										<path
+											d="M32 8.701c0 0.384-0.142 0.768-0.426 1.060l-14.545 15c-0.568 0.586-1.489 0.586-2.057 0l-14.545-15c-0.568-0.586-0.568-1.535 0-2.121s1.489-0.586 2.057 0l13.517 13.939 13.517-13.939c0.568-0.586 1.489-0.586 2.057 0 0.284 0.293 0.426 0.677 0.426 1.060z"
+										></path>
+									</svg>
+								</div>
 							</div>
 						</li>
 					</ul>
-				</fieldset>
-			</section>
+				</div>
+			</fieldset>
+		</section>
 
-			<section class="order-form__section comments">
-				<h2 class="order-form__header">Комментарий</h2>
-				<fieldset class="order-form__fieldset">
-					<legend class="order-form__legend visually-hidden">Комментарий
-					</legend>
-					<textarea class="comments__textarea" name="order-comments"
-						id="order-comments" placeholder="Есть уточнения?"></textarea>
-				</fieldset>
-			</section>
+		<section class="order-form__section payment">
+			<h2 class="order-form__header">Оплата</h2>
+			<fieldset class="order-form__fieldset">
+				<legend class="order-form__legend visually-hidden">Оплата</legend>
+				<ul class="order-form__radio-list">
+					<li class="order-form__radio-list-item">
+						<input
+							class="radio-button delivery__radio"
+							id="cash"
+							type="radio"
+							name="payment-options"
+							value="cash"
+						/>
+						<label class="delivery__option-label" for="cash">Наличными</label>
+					</li>
+					<li class="order-form__radio-list-item">
+						<input
+							class="radio-button delivery__radio"
+							id="card"
+							type="radio"
+							name="payment-options"
+							value="card"
+						/>
+						<label class="delivery__option-label" for="card">Картой</label>
+					</li>
+					<li class="order-form__radio-list-item">
+						<input
+							class="radio-button delivery__radio"
+							id="applepay"
+							type="radio"
+							name="payment-options"
+							value="applepay"
+						/>
+						<label class="delivery__option-label" for="applepay"
+							>Apple Pay</label
+						>
+					</li>
+				</ul>
+			</fieldset>
+		</section>
 
-		</form>
+		<section class="order-form__section change-cash">
+			<h2 class="order-form__header">Сдача</h2>
+			<fieldset class="order-form__fieldset">
+				<legend class="order-form__legend visually-hidden">Сдача</legend>
+				<ul class="order-form__radio-list">
+					<li class="order-form__radio-list-item">
+						<input
+							class="radio-button delivery__radio"
+							class="radio-button"
+							id="nochange"
+							type="radio"
+							name="change-cash-options"
+							value="nochange"
+						/>
+						<label class="delivery__option-label" for="nochange"
+							>Без сдачи</label
+						>
+					</li>
+					<li class="order-form__radio-list-item">
+						<input
+							class="radio-button delivery__radio change-cash__change"
+							id="change"
+							type="radio"
+							name="change-cash-options"
+							value="change"
+						/>
+						<label class="delivery__option-label" for="change">Сдача с</label>
+						<div class="delivery__change-wrapper">
+							<input
+								class="text-input delivery__change-input"
+								type="text"
+								placeholder="0"
+							/>
+						</div>
+					</li>
+				</ul>
+			</fieldset>
+		</section>
 
-		<div class="summary cart__summary">
-			<div class="summary__numbers">
-				<p class="summary__sum">Итого: 397 ₽</p>
-			</div>
-			<button class="button button-filled summary__button"
-				form="cart-form">Оформить
-				заказ</button>
+		<section class="order-form__section comments">
+			<h2 class="order-form__header">Комментарий</h2>
+			<fieldset class="order-form__fieldset">
+				<legend class="order-form__legend visually-hidden">Комментарий</legend>
+				<textarea
+					class="comments__textarea"
+					name="order-comments"
+					id="order-comments"
+					placeholder="Есть уточнения?"
+				></textarea>
+			</fieldset>
+		</section>
+	</form>
+
+	<div class="summary cart__summary">
+		<div class="summary__numbers">
+			<p class="summary__sum">Итого: 397 ₽</p>
 		</div>
+		<button class="button button-filled summary__button" form="cart-form">
+			Оформить заказ
+		</button>
+	</div>
 </section>
-
-
-			</div>
-		</main>
-		<div class="footer">
+</div>
+			</main>
+			<div class="footer">
 	<div class="footer__container">
 		<div class="footer__logo-col">
 			<a class="logo link-primary logo__link footer__logo" href="">
@@ -982,12 +1329,9 @@
 	<hr class="separator footer__separator">
 	<p class="footer__copy-clone">© Copyright 2021 — Куда Пицца</p>
 </div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-	</div>
-	<script
-		src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-	<script src="js/app.min.js"></script>
-</body>
-
+		<script src="js/app.min.js" type="module"></script>
+	</body>
 </html>
