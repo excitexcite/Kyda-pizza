@@ -1,0 +1,19 @@
+@forward "header";
+@forward "footer";
+@forward "main";
+@forward "order";
+@forward "filter";
+@forward "product-details";
+@forward "about";
+@forward "category-section";
+@forward "account";
+@forward "login";
+@forward "cart";
+
+@use "abstract" as *;
+@use "base" as *;
+@use "sass:math";
+
+.page {
+	position: relative;
+}

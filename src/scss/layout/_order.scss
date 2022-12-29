@@ -1,0 +1,278 @@
+@use "abstract" as *;
+@use "base" as *;
+@use "sass:math";
+
+.order__list {
+	display: flex;
+	flex-flow: column;
+	gap: rem(12);
+
+	@include mqm(500) {
+		gap: rem(20);
+	}
+}
+
+.order__list-item {
+	display: flex;
+	position: relative;
+	padding: 12px;
+	gap: rem(12);
+	background-color: $clr-white;
+	border: 1px solid $grey-line;
+	border-radius: 12px;
+}
+
+.order__item-info {
+	display: flex;
+	flex-flow: column;
+	flex-grow: 1;
+}
+
+.order__item-image {
+	display: block;
+	max-width: 94px;
+	max-height: 94px;
+	width: 84px;
+	height: 84px;
+	object-fit: cover;
+	align-self: center;
+
+	@include mqm(500) {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.order__item-title {
+	font-weight: 600;
+}
+
+.order__price-quantity {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.order__item-controls {
+	display: flex;
+	align-items: center;
+	max-width: rem(92);
+	color: $primary;
+	border-radius: 6px;
+}
+
+.order__add-item,
+.order__remove-item {
+	position: relative;
+	min-height: rem(32);
+	min-width: rem(26);
+	border: 1px solid $primary-light;
+	color: $primary;
+	background-color: $primary-light;
+	transition: background-color $buttonTransition ease-in-out 0ms,
+		border-color $buttonTransition ease-in-out 0ms;
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: $clr-black;
+			border-color: $clr-black;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: 3px solid $clr-black;
+	}
+
+	&:active {
+		background-color: $clr-black;
+		outline: 3px solid $primary;
+	}
+}
+
+.order__remove-item {
+	width: rem(8);
+	height: rem(8);
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	background-image: url("../img/icons.svg#minus");
+	background-size: rem(8);
+	background-repeat: no-repeat;
+	background-position: center left rem(8);
+}
+
+.order__add-item {
+	background-image: url("../img/icons.svg#plus");
+	background-size: rem(8);
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	background-repeat: no-repeat;
+	background-position: center right rem(8);
+}
+
+.order__item-quantity {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	min-width: rem(40);
+	min-height: rem(32);
+	background-color: $primary-light;
+	font-weight: 600;
+	@include adaptive-font(14, 16);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(20, 16);
+	}
+}
+
+.order__item-price {
+	color: $primary;
+	font-weight: 600;
+}
+
+.order-add {
+	padding: 12px;
+	max-width: 270px;
+	min-height: rem(85);
+
+	@include mqm(400) {
+		max-width: rem(300);
+	}
+
+	@include mqm(600) {
+		flex-flow: column;
+		max-width: rem(190);
+		padding: 0;
+	}
+}
+
+.order-add__image-container {
+	align-self: center;
+	max-width: rem(60);
+	max-height: rem(60);
+
+	@include mqm(390) {
+		max-width: rem(84);
+		max-height: rem(84);
+	}
+
+	@include mqm(768) {
+		max-width: rem(120);
+		max-height: rem(120);
+		border-radius: 6px;
+	}
+
+	@include mqm(1024) {
+		max-width: rem(190);
+		max-height: rem(190);
+	}
+}
+
+.order-add__content {
+	@include mqm(600) {
+		flex-flow: column;
+		padding: 0 16px 16px 16px;
+		height: 100%;
+		width: auto;
+	}
+}
+
+.order-add__content-top {
+	display: flex;
+	flex-flow: column;
+
+	@include mqm(600) {
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.order-add__title {
+	margin-bottom: rem(8);
+}
+
+.order-add__weight {
+	display: none;
+	margin-bottom: rem(12);
+
+	@include mqm(600) {
+		display: flex;
+	}
+}
+
+.order-add__button {
+	margin-top: auto;
+	min-width: rem(70);
+	padding: rem(7) rem(16);
+	font-weight: 600;
+
+	@include mqm(600) {
+		flex-basis: 100%;
+		padding-block: rem(10);
+	}
+}
+
+.order-add__price {
+	@include adaptive-font(14, 16);
+	line-height: math.div(18, 16);
+
+	@include mqm(600) {
+		background-color: transparent;
+		line-height: math.div(20, 16);
+	}
+}
+
+.order-add__sale {
+	@include adaptive-font(14, 16);
+	line-height: math.div(16, 16);
+
+	@include mqm(600) {
+		padding-left: 0;
+		line-height: math.div(18, 16);
+	}
+}
+
+.order-add__next-slide,
+.order-add__prev-slide {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: none;
+	margin: auto 0;
+
+	& svg {
+		height: rem(16);
+		width: rem(16);
+	}
+
+	@include mqm(1024) {
+		display: inline-flex;
+	}
+}
+
+.order-add__next-slide {
+	& svg {
+		margin-left: rem(2);
+	}
+}
+
+.order-add__prev-slide {
+	& svg {
+		margin-right: rem(2);
+	}
+}
+
+.order-add__next-slide {
+	right: -70px;
+}
+
+.order-add__prev-slide {
+	left: -70px;
+}

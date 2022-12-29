@@ -1,0 +1,556 @@
+<div class="menu-blured-bg filter page__filter" id="food-filter">
+	<div class="menu-wrapper filter__wrapper">
+		<button tabindex="0" class="button-close-menu-mobile filter__close">
+			<span class="visually-hidden">Закрыть меню</span>
+		</button>
+
+		<div class="menu-content filter__content">
+			<div class="filter__top">
+				<h2 class="filter__heading">Фильтры</h2>
+				<button class="filter__close">
+					<svg
+						class="icon-close"
+						role="img"
+						aria-hidden="true"
+						width="32"
+						height="32"
+						viewBox="0 0 32 32"
+					>
+						<title>Закрыть фильтры</title>
+						<path
+							d="M1.776 0.305c-0.406-0.406-1.065-0.406-1.471 0s-0.406 1.065 0 1.471l14.224 14.224-14.224 14.224c-0.406 0.406-0.406 1.065 0 1.471s1.065 0.406 1.471 0l14.224-14.224 14.224 14.224c0.406 0.406 1.065 0.406 1.471 0s0.406-1.065 0-1.471l-14.224-14.224 14.224-14.224c0.406-0.406 0.406-1.065 0-1.471s-1.065-0.406-1.471 0l-14.224 14.224-14.224-14.224z"
+						></path>
+					</svg>
+					<span class="visually-hidden">Закрыть фильтры</span>
+				</button>
+			</div>
+
+			<div class="filter__categories">
+				<div class="filter__catgory general filter__general">
+					<h3 class="filter__category-heading">Общее</h3>
+					<ul class="filter__list">
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="hit"
+								name="general"
+								value="hit"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="hit"
+								>Хит</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="new"
+								name="general"
+								value="new"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="new"
+								>Новинка</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="meat"
+								name="general"
+								value="meat"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="meat"
+								>С мясом</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="vegiterian"
+								name="general"
+								value="vegiterian"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="vegiterian"
+								>Вегетарианская</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="chiken"
+								name="general"
+								value="chiken"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="chiken"
+								>С курицей</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="no-onion"
+								name="general"
+								value="no-onion"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="no-onion"
+								>Без лука</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="mushrooms"
+								name="general"
+								value="mushrooms"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="mushrooms"
+								>С грибами</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="seefood"
+								name="general"
+								value="seefood"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="seefood"
+								>С морепродуктами</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="bbq"
+								name="general"
+								value="bbq"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="bbq"
+								>Барбекью</label
+							>
+						</li>
+					</ul>
+				</div>
+
+				<div class="filter__catgory cheese filter__cheese">
+					<h3 class="filter__category-heading">Сыр</h3>
+					<ul class="filter__list">
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="reggianito"
+								name="cheese"
+								value="reggianito"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="reggianito"
+								>Реджанито</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="mozzarella"
+								name="cheese"
+								value="mozzarella"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="mozzarella"
+								>Моцарелла</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="cheddar"
+								name="cheese"
+								value="cheddar"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="cheddar"
+								>Чеддер</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="with-blue-mold"
+								name="cheese"
+								value="with-blue-mold"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="with-blue-mold"
+								>С голубой плесенью</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="chese-mix"
+								name="cheese"
+								value="chese-mix"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="chese-mix"
+								>Смесь итальянских сыров</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="soft-young-cheese"
+								name="cheese"
+								value="soft-young-cheese"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="soft-young-cheese"
+								>Мягкий молодой сыр</label
+							>
+						</li>
+					</ul>
+				</div>
+
+				<div class="filter__catgory meat filter__meat">
+					<h3 class="filter__category-heading">Мясо</h3>
+					<ul class="filter__list">
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="pepperoni"
+								name="meat"
+								value="pepperoni"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="pepperoni"
+								>Пепперони</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="pork"
+								name="meat"
+								value="pork"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="pork"
+								>Свинина</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="ham"
+								name="meat"
+								value="ham"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="ham"
+								>Ветчина</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="becon"
+								name="meat"
+								value="becon"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="becon"
+								>Бекон</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="beef"
+								name="meat"
+								value="beef"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="beef"
+								>Говядина</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="chorizo"
+								name="meat"
+								value="chorizo"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="chorizo"
+								>Бекон</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="sausages"
+								name="meat"
+								value="sausages"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="sausages"
+								>Колбаски</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="chicken-breast"
+								name="meat"
+								value="chicken-breast"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="chicken-breast"
+								>Куриная грудка</label
+							>
+						</li>
+					</ul>
+				</div>
+
+				<div class="filter__catgory ingridient filter__ingridient">
+					<h3 class="filter__category-heading">Компонент</h3>
+					<ul class="filter__list">
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="shrimp"
+								name="ingridient"
+								value="shrimp"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="shrimp"
+								>Креветка</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="peanapples"
+								name="ingridient"
+								value="peanapples"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="peanapples"
+								>Ананасы</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="champignons"
+								name="ingridient"
+								value="champignons"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="champignons"
+								>Шампиньоны</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="onion"
+								name="ingridient"
+								value="onion"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="onion"
+								>Лук</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="jalapeno"
+								name="ingridient"
+								value="jalapeno"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="jalapeno"
+								>Перец халапеньо</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="oregano"
+								name="ingridient"
+								value="oregano"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="oregano"
+								>Перец халапеньо</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="green-papper"
+								name="ingridient"
+								value="green-papper"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="green-papper"
+								>Зеленый перец</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="tomatoes"
+								name="ingridient"
+								value="tomatoes"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="tomatoes"
+								>Томаты</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="garlic"
+								name="ingridient"
+								value="garlic"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="garlic"
+								>Чеснок</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="red-pepper"
+								name="ingridient"
+								value="red-pepper"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="red-pepper"
+								>Красный перец</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="olives"
+								name="ingridient"
+								value="olives"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="olives"
+								>Оливки</label
+							>
+						</li>
+						<li class="filter__list-item">
+							<input
+								class="filter__checkbox visually-hidden"
+								type="checkbox"
+								id="italian-herb"
+								name="ingridient"
+								value="italian-herb"
+							/>
+							<label
+								class="choose-label choose-label-outlined filter__item-label"
+								for="italian-herb"
+								>Смесь итальянских трав</label
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="filter__buttons">
+				<button class="button button-outlined-primary filter__reset">
+					Сбросить
+				</button>
+				<button
+					class="button button-filled filter__option-primary filter__apply"
+				>
+					Применить
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

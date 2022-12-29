@@ -1,0 +1,135 @@
+@use "abstract" as *;
+@use "base" as *;
+@use "sass:math";
+
+.footer {
+	background-color: $clr-white;
+}
+
+.footer__container {
+	display: flex;
+	flex-flow: column;
+	row-gap: rem(24);
+	margin: rem(24) auto;
+
+	@include mqm(600) {
+		flex-flow: row;
+		flex-wrap: wrap;
+	}
+
+	@include mqm(1000) {
+		justify-content: space-between;
+	}
+}
+
+.footer__logo-col,
+.footer__about,
+.footer__contacts,
+.footer__help {
+	flex: 0 0 50%;
+	@include mqm(1000) {
+		display: inline-flex;
+		flex-flow: column;
+		flex-basis: content;
+	}
+}
+
+.footer__logo-col {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	@include mqm(600) {
+		flex-flow: column;
+		order: 3;
+	}
+	@include mqm(1000) {
+		order: 1;
+	}
+}
+
+.footer__logo {
+	flex-basis: content;
+}
+
+.footer__copy {
+	line-height: math.div(18, 16);
+	@include adaptive-font(14, 16);
+	display: none;
+
+	@include mqm(600) {
+		display: flex;
+	}
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
+	}
+}
+
+.footer__copy-clone {
+	font-size: rem(14);
+	line-height: rem(18);
+	padding: 0 10px;
+	margin: rem(12) 0;
+
+	@media screen and (min-width: em(390)) {
+		padding: 0 20px;
+	}
+
+	@include mqm(600) {
+		display: none;
+	}
+}
+
+.footer__help,
+.footer__about {
+	display: flex;
+	flex-flow: column;
+	order: 2;
+	@include adaptive-value("gap", 22, 20, 1);
+}
+
+.footer__contacts {
+	order: 4;
+}
+
+.footer__title {
+	font-weight: 600;
+	@include adaptive-font(14, 20);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(28, 16);
+	}
+}
+
+.footer__list {
+	display: flex;
+	flex-flow: column;
+	@include adaptive-value("gap", 20, 16, 1);
+}
+
+.footer__link {
+	padding: 6px 6px 6px 0;
+	@include adaptive-font(14, 18);
+	line-height: math.div(18, 16);
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
+	}
+}
+
+.footer__socials-link {
+	line-height: math.div(18, 16);
+	@include adaptive-font(14, 16);
+
+	@include mqm(768) {
+		line-height: math.div(22, 16);
+	}
+}
+
+.footer__separator {
+	@include mqm(600) {
+		display: none;
+	}
+}
