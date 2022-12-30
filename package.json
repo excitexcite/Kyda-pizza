@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "gulpfile.js",
 	"type": "module",
+	"homepage": "https://github.com/excitexcite/Kyda-pizza",
 	"scripts": {
 		"fonts": "gulp fonts",
 		"dev": "gulp",
@@ -11,6 +12,7 @@
 		"build": "gulp build --build",
 		"zip": "gulp deployZip --build",
 		"deploy": "gulp deployFTP --build",
+		"deployGitHub": "gh-pages -d dist",
 		"svgSpriteCreate": "gulp svgSpriteCreate"
 	},
 	"author": "excite",
