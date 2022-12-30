@@ -1749,7 +1749,6 @@ s::after {
 
 .menu-wrapper {
   margin-top: 60px;
-  padding-bottom: 60px;
   width: 100%;
   visibility: hidden;
   -webkit-transform: translateY(1000%);
@@ -1771,7 +1770,7 @@ s::after {
 
 .menu-content {
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
