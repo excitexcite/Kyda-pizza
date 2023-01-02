@@ -24,7 +24,8 @@
 }
 
 .menu-wrapper {
-	margin-top: 60px;
+	position: fixed;
+	top: 60px;
 	width: 100%;
 	visibility: hidden;
 	transform: translateY(1000%);
@@ -37,8 +38,10 @@
 
 	@include mqm(500) {
 		width: auto;
-		margin-top: 0;
-		margin-left: auto;
+		height: 100%;
+
+		top: 0;
+		right: 0;
 		transform: translateY(0);
 		transform: translateX(100%);
 
@@ -50,7 +53,7 @@
 
 .menu-content {
 	position: relative;
-	height: 100vh;
+	height: 100%;
 	overflow-x: hidden;
 	background-color: $clr-white;
 	border-top: 1px solid $grey-line;
