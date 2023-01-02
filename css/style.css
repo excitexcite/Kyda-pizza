@@ -1749,7 +1749,8 @@ s::after {
 }
 
 .menu-wrapper {
-  margin-top: 60px;
+  position: fixed;
+  top: 60px;
   width: 100%;
   visibility: hidden;
   -webkit-transform: translateY(1000%);
@@ -1771,7 +1772,7 @@ s::after {
 
 .menu-content {
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   background-color: #fff;
   border-top: 1px solid #f0f0f0;
@@ -2399,7 +2400,7 @@ s::after {
 }
 
 .menu-mobile__login-options {
-  border-top: 1px solid #191919;
+  border-top: 1px solid #f0f0f0;
   padding: 0.75rem 1.25rem;
 }
 
@@ -2532,7 +2533,7 @@ s::after {
 
 .menu-mobile__contacts {
   padding: 1.25rem 1.25rem;
-  border-bottom: 1px solid #191919;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .contacts {
@@ -3697,10 +3698,9 @@ s::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 53.125rem;
 }
 
@@ -3731,6 +3731,7 @@ s::after {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   border-radius: 0;
+  padding-block: 3.75rem;
 }
 
 .login-menu__content-wrapper {
@@ -5149,8 +5150,9 @@ s::after {
 
   .menu-wrapper {
     width: auto;
-    margin-top: 0;
-    margin-left: auto;
+    height: 100%;
+    top: 0;
+    right: 0;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
@@ -5908,9 +5910,11 @@ s::after {
         -ms-transform: translate(50%, -50%);
             transform: translate(50%, -50%);
     width: 90%;
+    height: revert;
   }
 
   .login-menu__content {
+    overflow: hidden;
     border-radius: 24px;
     max-height: 28.125rem;
   }
@@ -6315,6 +6319,7 @@ s::after {
             justify-content: center;
     top: 50%;
     right: 50%;
+    height: revert;
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
@@ -6850,7 +6855,7 @@ s::after {
 @media (max-width: 47.99375em) {
   .menu-mobile__list {
     padding: 0.625rem 1.25rem;
-    border-block: 1px solid #191919;
+    border-block: 1px solid #f0f0f0;
   }
 
   .menu-mobile__list-item {
