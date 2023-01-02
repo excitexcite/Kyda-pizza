@@ -4,8 +4,9 @@
 
 .login-menu__wrapper {
 	display: flex;
-	justify-content: center;
-	margin-top: 0;
+	// justify-content: center;
+	align-items: center;
+	// margin-top: 0;
 	max-width: rem(850);
 
 	@include mqm(768) {
@@ -14,6 +15,7 @@
 		right: 50%;
 		transform: translate(50%, -50%);
 		width: 90%;
+		height: revert;
 	}
 }
 
@@ -54,8 +56,10 @@
 	justify-content: center;
 	flex-basis: 100%;
 	border-radius: 0;
+	padding-block: rem(60);
 
 	@include mqm(768) {
+		overflow: hidden;
 		border-radius: 24px;
 		max-height: rem(450);
 	}
